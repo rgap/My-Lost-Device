@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@layout/tab2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/label_configdesc"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textView" android:layout_gravity="center" android:autoText="false"/>
+
+    <ToggleButton
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:text="New ToggleButton"
+            android:layout_marginTop="20dp"
+            android:textOff="@string/bt_enable_dev"
+            android:textOn="@string/bt_disable_dev"
+            android:id="@+id/toggleButton" android:layout_gravity="center" android:onClick="actionChangeState"/>
+
+    <Button
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_unlink"
+            android:layout_marginTop="20dp"
+            android:id="@+id/button" android:layout_gravity="center" android:onClick="actionUnlink"/>
+</LinearLayout>
