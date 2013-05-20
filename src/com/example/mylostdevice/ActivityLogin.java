@@ -80,14 +80,8 @@ public class ActivityLogin extends Activity{
             return;
         }
         else{
-
             editor.putInt("userid",  userid_g);
             editor.commit();
-
-            Intent i=new Intent(this,ActivityTabs.class);
-            startActivity(i);
-
-            tToast("Login Successful");
         }
 
         //DEVICE nuevo???
@@ -119,6 +113,9 @@ public class ActivityLogin extends Activity{
         }
 
         pb.setVisibility(View.GONE);
+
+        Intent i=new Intent(this,ActivityTabs.class);
+        startActivity(i);
 
         tToast("Login Successful");
 

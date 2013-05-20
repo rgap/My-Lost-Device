@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.*;
 import android.widget.TabHost.TabSpec;
 import org.apache.http.HttpResponse;
@@ -22,9 +23,13 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -97,12 +102,80 @@ public class ActivityTabs extends Activity implements LocationListener {
 
         Log.e("addReg", "userid ----> " + String.valueOf(userid_g));
 
+        //LISTA
+
+        /*
+        Device[] devices={
+                new Device("afas","sfa","fa"),
+                new Device("afas","sfa","fa"),
+                new Device("afas","sfa","fa"),
+                new Device("afas","sfa","fa"),
+                new Device("afas","sfa","fa"),
+                new Device("afas","sfa","fa"),
+        };
+        */
+
+        //devices.
+
+        /*
+        AdapterDevices adapter=new AdapterDevices(devices);
+        ListView listView=(ListView)findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+        */
+
         //ACTUALIZAR
 
         Thread TUpdateDev = new Thread(new UpdateDeviceRunnable());
         TUpdateDev.start();
 
 	}
+
+
+    class AdapterDevices extends ArrayAdapter<Device> {
+
+        public AdapterDevices(Device[]device) {
+            super(getApplicationContext(),0,device);
+        }
+
+
+        private class Holder {
+
+            public TextView txdevType;
+            public TextView txdevLoc;
+            public TextView txdevState;
+
+            public Holder(View l) {
+                txdevType=(TextView)l.findViewById(R.id.devType);
+                txdevLoc=(TextView)l.findViewById(R.id.devLoc);
+                txdevState=(TextView)l.findViewById(R.id.devState);
+            }
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
+            Device p=getItem(position);
+            if(convertView!=null) {
+                Log.d("ttt","not null");
+            }
+            RelativeLayout l;
+            Holder h;
+            if(convertView==null) {
+                l=(RelativeLayout)getLayoutInflater().inflate(R.layout.list_row_layout, null);
+                h=new Holder(l);
+                l.setTag(h);
+            }
+            else {
+                l=(RelativeLayout)convertView;
+                h=(Holder)l.getTag();
+            }
+
+            h.txdevType.setText(p.devtype);
+            h.txdevLoc.setText(p.devlocation);
+            h.txdevState.setText(p.devstate);
+
+            return l;
+        }
+    }
 
     private void tToast(String s) {
         Context context = getApplicationContext();
@@ -166,6 +239,59 @@ public class ActivityTabs extends Activity implements LocationListener {
     }
 
     public void actionUnlink(View v){
+    }
+
+    private class UpdateDeviceListRunnable implements Runnable {
+
+        String userid;
+
+        UpdateDeviceListRunnable()
+        {
+            this.userid=String.valueOf(userid_g);
+        }
+
+        @Override
+        public void run() {
+
+            while(true){
+
+                HttpClient httpclient=new DefaultHttpClient();
+                HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceSelect.php");
+
+                try {
+                    // Add your data
+                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                    nameValuePairs.add(new BasicNameValuePair("userid", userid));
+
+                    httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                    // Execute HTTP Post Request
+                    HttpResponse response = httpclient.execute(httppost);
+
+                    //LISTA
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), "UTF-8"));
+                    String json = reader.readLine();
+                    JSONTokener tokener = new JSONTokener(json);
+                    JSONArray finalResult = new JSONArray(tokener);
+
+
+
+                    Log.d("addReg","LISTA ACTUALIZADA");
+
+
+                } catch (Exception e){
+
+                    Log.e("addReg", "Exception " + e.toString());
+                }
+
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }
     }
 
 
