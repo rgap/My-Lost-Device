@@ -187,7 +187,7 @@
       <file leaf-file-name="ActivityTabs.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="0" selection-start="6596" selection-end="6596" vertical-scroll-proportion="1.1946902">
+            <state line="205" column="0" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.2920354">
               <folding />
             </state>
           </provider>
@@ -322,28 +322,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mylostdevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLostDevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLostDevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mylostdevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -607,12 +585,12 @@
       <created>1368901853025</created>
       <updated>1368901853025</updated>
       <workItem from="1368901857742" duration="29482000" />
-      <workItem from="1368972770089" duration="19748000" />
+      <workItem from="1368972770089" duration="19961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49230000" />
+    <option name="totallyTimeSpent" value="49443000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -851,7 +829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="0" selection-start="6596" selection-end="6596" vertical-scroll-proportion="1.1946902">
+        <state line="205" column="0" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.2920354">
           <folding />
         </state>
       </provider>
