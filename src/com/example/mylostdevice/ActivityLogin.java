@@ -143,7 +143,7 @@ public class ActivityLogin extends Activity{
         public void run() {
 
             HttpClient httpclient=new DefaultHttpClient();
-            HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corUserCheck.php");
+            HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corUserCheck.php");
 
             try {
                 // Add your data
@@ -193,7 +193,7 @@ public class ActivityLogin extends Activity{
         public void run() {
 
             HttpClient httpclient=new DefaultHttpClient();
-            HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceSearch.php");
+            HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corDeviceSearch.php");
 
             try {
                 // Add your data
@@ -243,7 +243,7 @@ public class ActivityLogin extends Activity{
         public void run() {
 
             HttpClient httpclient=new DefaultHttpClient();
-            HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceInsert.php");
+            HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php");
 
             try {
                 // Add your data

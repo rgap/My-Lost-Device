@@ -256,7 +256,7 @@ public class ActivityTabs extends Activity implements LocationListener {
             while(true){
 
                 HttpClient httpclient=new DefaultHttpClient();
-                HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceSelect.php");
+                HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corDeviceSelect.php");
 
                 try {
                     // Add your data
@@ -320,7 +320,7 @@ public class ActivityTabs extends Activity implements LocationListener {
             while(true){
 
                 HttpClient httpclient=new DefaultHttpClient();
-                HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceUpdate.php");
+                HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corDeviceUpdate.php");
 
                 try {
                     // Add your data
