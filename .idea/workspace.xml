@@ -52,7 +52,7 @@
     <file path="/activity_main.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368916130838" ignored="false" />
     <file path="/activity_register.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368928846909" ignored="false" />
     <file path="/tab1.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368916078545" ignored="false" />
-    <file path="/ActivityLogin.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368940732208" ignored="false" />
+    <file path="/ActivityLogin.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1369019535084" ignored="false" />
     <file path="/ActivityRegister.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1369017230840" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368923513526" ignored="false" />
     <file path="$PROJECT_DIR$/src/com/example/models/TareaAsinc.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368929604243" ignored="false" />
@@ -124,19 +124,10 @@
       <file leaf-file-name="ActivityRegister.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="7" selection-start="6303" selection-end="6303" vertical-scroll-proportion="-33.23077">
+            <state line="82" column="8" selection-start="2291" selection-end="2500" vertical-scroll-proportion="-2.3076923">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddUserRunnable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddUserRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -152,10 +143,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
+            <state line="15" column="16" selection-start="529" selection-end="540" vertical-scroll-proportion="0.6164383">
               <folding>
                 <element signature="e#643#661#0" expanded="true" />
                 <element signature="e#815#833#0" expanded="true" />
@@ -166,28 +157,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddDeviceRunnable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddDeviceRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ActivityLogin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
+            <state line="67" column="0" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityTabs.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ActivityTabs.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="205" column="0" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.2920354">
+            <state line="205" column="0" selection-start="5907" selection-end="5907" vertical-scroll-proportion="-9.0">
               <folding />
             </state>
           </provider>
@@ -247,11 +229,11 @@
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/AddDeviceRunnable.java" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/AddUserRunnable.java" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/GetUserRunnable.java" />
-        <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/tab2.xml" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java" />
+        <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java" />
       </list>
     </option>
   </component>
@@ -585,12 +567,12 @@
       <created>1368901853025</created>
       <updated>1368901853025</updated>
       <workItem from="1368901857742" duration="29482000" />
-      <workItem from="1368972770089" duration="19961000" />
+      <workItem from="1368972770089" duration="21278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49443000" />
+    <option name="totallyTimeSpent" value="50760000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -735,13 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddUserRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/GetUserRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="55" selection-start="1035" selection-end="1056" vertical-scroll-proportion="0.0">
@@ -755,18 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="409" column="22" selection-start="18031" selection-end="18031" vertical-scroll-proportion="0.33238637">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#643#661#0" expanded="true" />
-            <element signature="e#815#833#0" expanded="true" />
-            <element signature="e#1178#1196#0" expanded="true" />
-            <element signature="e#1559#1577#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,7 +769,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="7" selection-start="6303" selection-end="6303" vertical-scroll-proportion="-33.23077">
+        <state line="82" column="8" selection-start="2291" selection-end="2500" vertical-scroll-proportion="-2.3076923">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -815,22 +778,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddDeviceRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="67" column="0" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="205" column="0" selection-start="5907" selection-end="5907" vertical-scroll-proportion="0.2920354">
+        <state line="205" column="0" selection-start="5907" selection-end="5907" vertical-scroll-proportion="-9.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="529" selection-end="540" vertical-scroll-proportion="0.6164383">
+          <folding>
+            <element signature="e#643#661#0" expanded="true" />
+            <element signature="e#815#833#0" expanded="true" />
+            <element signature="e#1178#1196#0" expanded="true" />
+            <element signature="e#1559#1577#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
