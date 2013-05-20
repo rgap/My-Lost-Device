@@ -37,7 +37,9 @@ public class ActivityLogin extends Activity{
 
     private ProgressBar pb;
 
-    int userid;
+    int userid_g;
+    int devid_g;
+    int exist_dev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,21 +65,23 @@ public class ActivityLogin extends Activity{
 
     public void actionLogin(View v){
 
+        pb.setVisibility(View.VISIBLE);
+
         Thread TLoginUsu = new Thread(new CheckLoginRunnable(loginemail.getText().toString(),loginpass.getText().toString()));
         TLoginUsu.start();
 
         while(TLoginUsu.isAlive());
 
-        if(userid == 0){
+        SharedPreferences preferences = getSharedPreferences("PrefFile", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        if(userid_g == 0){
             tToast("Incorrect Data");
             return;
         }
         else{
 
-            SharedPreferences preferences = getSharedPreferences("PrefFile", MODE_PRIVATE);
-
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putInt("userid",  userid);
+            editor.putInt("userid",  userid_g);
             editor.commit();
 
             Intent i=new Intent(this,ActivityTabs.class);
@@ -86,7 +90,37 @@ public class ActivityLogin extends Activity{
             tToast("Login Successful");
         }
 
+        //DEVICE nuevo???
 
+        exist_dev = -1;
+
+        if(preferences.contains("devid")){
+
+            devid_g= preferences.getInt("devid",0);
+
+            Thread TSearchDev = new Thread(new CheckLoginRunnable(String.valueOf(userid_g), String.valueOf(devid_g)));
+            TSearchDev.start();
+
+            while(TSearchDev.isAlive());
+        }
+
+        if(exist_dev != 1){
+
+            String devType = android.os.Build.MANUFACTURER +" - "+ System.getProperty("os.version");
+            String devLocation = "0";
+
+            Thread TRegistroDev = new Thread(new AddDeviceRunnable(String.valueOf(userid_g),devType,devLocation));
+            TRegistroDev.start();
+
+            while(TRegistroDev.isAlive());
+
+            editor.putInt("devid",  devid_g);
+            editor.commit();
+        }
+
+        pb.setVisibility(View.GONE);
+
+        tToast("Login Successful");
 
     }
 
@@ -133,7 +167,7 @@ public class ActivityLogin extends Activity{
                 JSONObject obj=new JSONObject(payload);
 
 
-                userid =  Integer.parseInt(obj.getString("resp"));
+                userid_g =  Integer.parseInt(obj.getString("resp"));
 
 
                 Log.e("addReg", obj.getString("resp"));
@@ -142,6 +176,107 @@ public class ActivityLogin extends Activity{
             } catch (Exception e){
 
                 Log.e("addReg", "Exception " + e.toString());
+            }
+        }
+    }
+
+
+
+    private class SearchDevRunnable implements Runnable {
+
+        String userid,devid;
+
+        SearchDevRunnable(String userid, String devid)
+        {
+            this.userid=userid;
+            this.devid=devid;
+        }
+
+        @Override
+        public void run() {
+
+            HttpClient httpclient=new DefaultHttpClient();
+            HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceSearch.php");
+
+            try {
+                // Add your data
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                nameValuePairs.add(new BasicNameValuePair("userid", userid));
+                nameValuePairs.add(new BasicNameValuePair("devid", devid));
+
+
+                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                // Execute HTTP Post Request
+                HttpResponse response = httpclient.execute(httppost);
+
+                ByteArrayOutputStream out=new ByteArrayOutputStream();
+                response.getEntity().writeTo(out);
+                String payload=out.toString();
+
+                JSONObject obj=new JSONObject(payload);
+
+
+                exist_dev =  Integer.parseInt(obj.getString("resp"));
+
+
+                Log.e("addReg", obj.getString("resp"));
+                //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
+
+            } catch (Exception e){
+
+                Log.e("addReg", "Exception " + e.toString());
+            }
+        }
+    }
+
+    private class AddDeviceRunnable implements Runnable {
+
+        String userid,devlocation,devtype;
+
+        AddDeviceRunnable(String userid, String devtype, String devlocation)
+        {
+            this.userid=userid;
+            this.devtype=devtype;
+            this.devlocation=devlocation;
+
+        }
+
+        @Override
+        public void run() {
+
+            HttpClient httpclient=new DefaultHttpClient();
+            HttpPost httppost =new HttpPost("http://192.168.1.34/MyLostDevice/controller_client/corDeviceInsert.php");
+
+            try {
+                // Add your data
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                nameValuePairs.add(new BasicNameValuePair("userid", userid));
+                nameValuePairs.add(new BasicNameValuePair("devtype", devtype));
+                nameValuePairs.add(new BasicNameValuePair("devlocation", devlocation));
+
+
+                httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+                // Execute HTTP Post Request
+                HttpResponse response = httpclient.execute(httppost);
+
+                ByteArrayOutputStream out=new ByteArrayOutputStream();
+                response.getEntity().writeTo(out);
+                String payload=out.toString();
+
+                JSONObject obj=new JSONObject(payload);
+
+
+                devid_g =  Integer.parseInt(obj.getString("resp"));
+
+
+                Log.e("addReg", "D - "+ obj.getString("resp"));
+                //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
+
+            } catch (Exception e){
+
+                Log.e("actReg", "Exception " + e.toString());
             }
         }
     }

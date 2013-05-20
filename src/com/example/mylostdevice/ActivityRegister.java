@@ -108,8 +108,6 @@ public class ActivityRegister extends Activity {
         Intent i=new Intent(this,ActivityTabs.class);
         startActivity(i);
 
-        tToast("TABS");
-
     }
 
     private void tToast(String s) {
