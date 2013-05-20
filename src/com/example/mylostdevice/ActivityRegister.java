@@ -45,6 +45,7 @@ public class ActivityRegister extends Activity {
     //Variables globales
 
     private int userid;
+    private int devid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +96,10 @@ public class ActivityRegister extends Activity {
         TRegistroDev.start();
 
         while(TRegistroDev.isAlive());
+
+        editor.putInt("devid",  devid);
+        editor.commit();
+
 
         pb.setVisibility(View.GONE);
 
@@ -193,6 +198,19 @@ public class ActivityRegister extends Activity {
 
                 // Execute HTTP Post Request
                 HttpResponse response = httpclient.execute(httppost);
+
+                ByteArrayOutputStream out=new ByteArrayOutputStream();
+                response.getEntity().writeTo(out);
+                String payload=out.toString();
+
+                JSONObject obj=new JSONObject(payload);
+
+
+                devid =  Integer.parseInt(obj.getString("resp"));
+
+
+                Log.e("addReg", "D - "+ obj.getString("resp"));
+                //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
 
             } catch (Exception e){
 

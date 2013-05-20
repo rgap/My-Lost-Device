@@ -53,14 +53,14 @@
     <file path="/activity_register.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368928846909" ignored="false" />
     <file path="/tab1.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368916078545" ignored="false" />
     <file path="/ActivityLogin.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368940732208" ignored="false" />
-    <file path="/ActivityRegister.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1369011279176" ignored="false" />
+    <file path="/ActivityRegister.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1369017230840" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368923513526" ignored="false" />
     <file path="$PROJECT_DIR$/src/com/example/models/TareaAsinc.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368929604243" ignored="false" />
     <file path="/TUser.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368930304217" ignored="false" />
     <file path="/TDevice.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368930293341" ignored="false" />
     <file path="/AddUserRunnable.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368966008120" ignored="false" />
     <file path="/AddDeviceRunnable.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1368934398200" ignored="false" />
-    <file path="/ActivityTabs.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1369013929841" ignored="false" />
+    <file path="/ActivityTabs.java" changelist="c24cc587-4070-4356-bde4-899769d02c98" time="1369017675030" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +124,7 @@
       <file leaf-file-name="ActivityRegister.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="5" selection-start="3239" selection-end="4728" vertical-scroll-proportion="-6.8076925">
+            <state line="212" column="7" selection-start="6303" selection-end="6303" vertical-scroll-proportion="-33.23077">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,15 +166,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicNameValuePair.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/org/apache/http/message/BasicNameValuePair.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="11" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AddDeviceRunnable.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddDeviceRunnable.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -187,16 +178,25 @@
       <file leaf-file-name="ActivityLogin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="5" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityTabs.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ActivityTabs.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="16" selection-start="1361" selection-end="1366" vertical-scroll-proportion="0.0">
+            <state line="229" column="0" selection-start="6596" selection-end="6596" vertical-scroll-proportion="1.1946902">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceOpenHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/DeviceOpenHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="13" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -214,7 +214,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab2.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tab2.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/tab2.xml">
           <provider editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -249,9 +249,9 @@
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/GetUserRunnable.java" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/tab2.xml" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java" />
         <option value="$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java" />
-        <option value="$PROJECT_DIR$/res/layout/tab2.xml" />
       </list>
     </option>
   </component>
@@ -304,20 +304,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MyLostDevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLostDevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MyLostDevice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,12 +607,12 @@
       <created>1368901853025</created>
       <updated>1368901853025</updated>
       <workItem from="1368901857742" duration="29482000" />
-      <workItem from="1368972770089" duration="15721000" />
+      <workItem from="1368972770089" duration="19748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45203000" />
+    <option name="totallyTimeSpent" value="49230000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -649,11 +635,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="24" width="1346" height="720" extended-state="1" />
-    <editor active="false" />
+    <frame x="23" y="24" width="1346" height="720" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3127889" sideWeight="0.68356645" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30046225" sideWeight="0.68356645" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30046225" sideWeight="0.68356645" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.81643355" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -668,7 +654,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2642527" sideWeight="0.68356645" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19799691" sideWeight="0.68356645" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18181819" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -744,13 +730,6 @@
         <state line="9" column="103" selection-start="429" selection-end="429" vertical-scroll-proportion="0.37604457" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/DeviceOpenHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_login.xml">
       <provider editor-type-id="text-editor">
         <state line="93" column="59" selection-start="4341" selection-end="4353" vertical-scroll-proportion="0.0">
@@ -813,39 +792,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddDeviceRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="978" selection-end="978" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="5" selection-start="3239" selection-end="4728" vertical-scroll-proportion="-6.8076925">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/location/Location.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="18" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.33238637">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="1361" selection-end="1366" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -868,6 +817,43 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/DeviceOpenHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityRegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="7" selection-start="6303" selection-end="6303" vertical-scroll-proportion="-33.23077">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1256" selection-end="1256" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/AddDeviceRunnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/mylostdevice/ActivityTabs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="0" selection-start="6596" selection-end="6596" vertical-scroll-proportion="1.1946902">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
