@@ -161,7 +161,7 @@
       <file leaf-file-name="custom_button.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/custom_button.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="37" selection-start="526" selection-end="526" vertical-scroll-proportion="0.37937742">
+            <state line="21" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="0.6128405">
               <folding />
             </state>
           </provider>
@@ -232,7 +232,7 @@
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="KEY_STORE_PATH" value="$USER_HOME$/workspace/AndroidAppsKeys/mylostdevice.keystore" />
-    <option name="KEY_ALIAS" value="mylostdevicekey" />
+    <option name="KEY_ALIAS" value="mylostdev" />
     <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="IdeDocumentHistory">
@@ -474,6 +474,8 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="AndroidIncludeSystemProguardFile" value="true" />
+    <property name="AndroidProguardConfigPath" value="$PROJECT_DIR$/proguard-project.txt" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="ExportedApkPath" value="$PROJECT_DIR$/MyLostDevice.apk" />
@@ -481,7 +483,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/workspace/AndroidAppsKeys/mylostdevice.keystore" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="AndroidRunProguardForReleaseBuild" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
@@ -659,7 +661,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100086000" />
+    <option name="totallyTimeSpent" value="101039000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -906,7 +908,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/custom_button.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="526" selection-end="526" vertical-scroll-proportion="0.37937742">
+        <state line="21" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="0.6128405">
           <folding />
         </state>
       </provider>

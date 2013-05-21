@@ -1,0 +1,4698 @@
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/ActivityLogin
+  Superclass:    android/app/Activity
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.rgap.mylostdevice.ActivityLogin extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 252):
+  + Integer [2130903040]
+  + Integer [2131230720]
+  + Integer [2131296258]
+  + Integer [2131296259]
+  + Integer [2131296263]
+  + String []
+  + String [, Android: ]
+  + String [, Dimension: ]
+  + String [0]
+  + String [Going to register page]
+  + String [Incorrect Data]
+  + String [Login Successful]
+  + String [PrefFile]
+  + String [You must fill all spaces]
+  + String [devid]
+  + String [os.version]
+  + String [userid]
+  + String [x]
+  + Class [android/app/Activity]
+  + Class [android/content/Intent]
+  + Class [android/content/SharedPreferences]
+  + Class [android/content/SharedPreferences$Editor]
+  + Class [android/os/Build]
+  + Class [android/util/DisplayMetrics]
+  + Class [android/view/Display]
+  + Class [android/view/MenuInflater]
+  + Class [android/view/View]
+  + Class [android/view/WindowManager]
+  + Class [android/widget/EditText]
+  + Class [android/widget/ProgressBar]
+  + Class [android/widget/Toast]
+  + Class [com/rgap/mylostdevice/ActivityLogin]
+  + Class [com/rgap/mylostdevice/ActivityRegister]
+  + Class [com/rgap/mylostdevice/ActivityTabs]
+  + Class [com/rgap/mylostdevice/a]
+  + Class [com/rgap/mylostdevice/b]
+  + Class [com/rgap/mylostdevice/c]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Class [java/lang/Thread]
+  + Fieldref [android/os/Build.MANUFACTURER Ljava/lang/String;]
+  + Fieldref [android/util/DisplayMetrics.heightPixels I]
+  + Fieldref [android/util/DisplayMetrics.widthPixels I]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.b I]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.c I]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.d Landroid/widget/EditText;]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.e Landroid/widget/EditText;]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.f Landroid/widget/ProgressBar;]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [android/util/DisplayMetrics.<init> ()V]
+  + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
+  + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+  + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+  + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+  + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Methodref [android/widget/Toast.show ()V]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.a ()Z]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.a (Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.findViewById (I)Landroid/view/View;]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.getApplicationContext ()Landroid/content/Context;]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.getMenuInflater ()Landroid/view/MenuInflater;]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.getWindowManager ()Landroid/view/WindowManager;]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.setContentView (I)V]
+  + Methodref [com/rgap/mylostdevice/ActivityLogin.startActivity (Landroid/content/Intent;)V]
+  + Methodref [com/rgap/mylostdevice/a.<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/b.<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/c.<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+  + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;]
+  + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+  + Methodref [java/lang/Thread.isAlive ()Z]
+  + Methodref [java/lang/Thread.start ()V]
+  + InterfaceMethodref [android/content/SharedPreferences.contains (Ljava/lang/String;)Z]
+  + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/Runnable;)V]
+  + NameAndType [MANUFACTURER Ljava/lang/String;]
+  + NameAndType [a ()Z]
+  + NameAndType [a (Ljava/lang/String;)V]
+  + NameAndType [a I]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b I]
+  + NameAndType [c I]
+  + NameAndType [commit ()Z]
+  + NameAndType [contains (Ljava/lang/String;)Z]
+  + NameAndType [d Landroid/widget/EditText;]
+  + NameAndType [e Landroid/widget/EditText;]
+  + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [equals (Ljava/lang/Object;)Z]
+  + NameAndType [f Landroid/widget/ProgressBar;]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [getInt (Ljava/lang/String;I)I]
+  + NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
+  + NameAndType [getMetrics (Landroid/util/DisplayMetrics;)V]
+  + NameAndType [getProperty (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + NameAndType [getText ()Landroid/text/Editable;]
+  + NameAndType [getWindowManager ()Landroid/view/WindowManager;]
+  + NameAndType [heightPixels I]
+  + NameAndType [inflate (ILandroid/view/Menu;)V]
+  + NameAndType [isAlive ()Z]
+  + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setVisibility (I)V]
+  + NameAndType [show ()V]
+  + NameAndType [start ()V]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [toString (I)Ljava/lang/String;]
+  + NameAndType [valueOf (I)Ljava/lang/String;]
+  + NameAndType [widthPixels I]
+  + Utf8 []
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [()Landroid/text/Editable;]
+  + Utf8 [()Landroid/view/Display;]
+  + Utf8 [()Landroid/view/MenuInflater;]
+  + Utf8 [()Landroid/view/WindowManager;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(I)V]
+  + Utf8 [(ILandroid/view/Menu;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/util/DisplayMetrics;)V]
+  + Utf8 [(Landroid/view/Menu;)Z]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/Runnable;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;)Z]
+  + Utf8 [(Ljava/lang/String;I)I]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Utf8 [, Android: ]
+  + Utf8 [, Dimension: ]
+  + Utf8 [0]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Going to register page]
+  + Utf8 [I]
+  + Utf8 [Incorrect Data]
+  + Utf8 [Landroid/widget/EditText;]
+  + Utf8 [Landroid/widget/ProgressBar;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Login Successful]
+  + Utf8 [MANUFACTURER]
+  + Utf8 [PrefFile]
+  + Utf8 [StackMapTable]
+  + Utf8 [You must fill all spaces]
+  + Utf8 [a]
+  + Utf8 [actionGoRegister]
+  + Utf8 [actionLogin]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/SharedPreferences]
+  + Utf8 [android/content/SharedPreferences$Editor]
+  + Utf8 [android/os/Build]
+  + Utf8 [android/util/DisplayMetrics]
+  + Utf8 [android/view/Display]
+  + Utf8 [android/view/MenuInflater]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/WindowManager]
+  + Utf8 [android/widget/EditText]
+  + Utf8 [android/widget/ProgressBar]
+  + Utf8 [android/widget/Toast]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityLogin]
+  + Utf8 [com/rgap/mylostdevice/ActivityRegister]
+  + Utf8 [com/rgap/mylostdevice/ActivityTabs]
+  + Utf8 [com/rgap/mylostdevice/a]
+  + Utf8 [com/rgap/mylostdevice/b]
+  + Utf8 [com/rgap/mylostdevice/c]
+  + Utf8 [commit]
+  + Utf8 [contains]
+  + Utf8 [d]
+  + Utf8 [devid]
+  + Utf8 [e]
+  + Utf8 [edit]
+  + Utf8 [equals]
+  + Utf8 [f]
+  + Utf8 [findViewById]
+  + Utf8 [getApplicationContext]
+  + Utf8 [getDefaultDisplay]
+  + Utf8 [getInt]
+  + Utf8 [getMenuInflater]
+  + Utf8 [getMetrics]
+  + Utf8 [getProperty]
+  + Utf8 [getSharedPreferences]
+  + Utf8 [getText]
+  + Utf8 [getWindowManager]
+  + Utf8 [heightPixels]
+  + Utf8 [inflate]
+  + Utf8 [isAlive]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [java/lang/Thread]
+  + Utf8 [makeText]
+  + Utf8 [onBackPressed]
+  + Utf8 [onCreate]
+  + Utf8 [onCreateOptionsMenu]
+  + Utf8 [os.version]
+  + Utf8 [putInt]
+  + Utf8 [setContentView]
+  + Utf8 [setVisibility]
+  + Utf8 [show]
+  + Utf8 [start]
+  + Utf8 [startActivity]
+  + Utf8 [toString]
+  + Utf8 [userid]
+  + Utf8 [valueOf]
+  + Utf8 [widthPixels]
+  + Utf8 [x]
+
+Fields (count = 6):
+  + Field:        d Landroid/widget/EditText;
+    Access flags: 0x2
+      = private android.widget.EditText d
+  + Field:        e Landroid/widget/EditText;
+    Access flags: 0x2
+      = private android.widget.EditText e
+  + Field:        f Landroid/widget/ProgressBar;
+    Access flags: 0x2
+      = private android.widget.ProgressBar f
+  + Field:        a I
+    Access flags: 0x0
+      = int a
+  + Field:        b I
+    Access flags: 0x0
+      = int b
+  + Field:        c I
+    Access flags: 0x0
+      = int c
+
+Methods (count = 8):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public ActivityLogin()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #53
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 60, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #54
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        + Integer [2130903040]
+      [8] invokevirtual #70
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.setContentView (I)V]
+      [11] aload_0 v0
+      [12] aload_0 v0
+      [13] ldc #3
+        + Integer [2131296258]
+      [15] invokevirtual #65
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.findViewById (I)Landroid/view/View;]
+      [18] checkcast #29
+        + Class [android/widget/EditText]
+      [21] putfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.d Landroid/widget/EditText;]
+      [24] aload_0 v0
+      [25] aload_0 v0
+      [26] ldc #4
+        + Integer [2131296259]
+      [28] invokevirtual #65
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.findViewById (I)Landroid/view/View;]
+      [31] checkcast #29
+        + Class [android/widget/EditText]
+      [34] putfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.e Landroid/widget/EditText;]
+      [37] aload_0 v0
+      [38] aload_0 v0
+      [39] ldc #5
+        + Integer [2131296263]
+      [41] invokevirtual #65
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.findViewById (I)Landroid/view/View;]
+      [44] checkcast #30
+        + Class [android/widget/ProgressBar]
+      [47] putfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.f Landroid/widget/ProgressBar;]
+      [50] aload_0 v0
+      [51] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.f Landroid/widget/ProgressBar;]
+      [54] bipush 8
+      [56] invokevirtual #60
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [59] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onBackPressed()V
+    Access flags: 0x1
+      = public void onBackPressed()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 1, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreateOptionsMenu(Landroid/view/Menu;)Z
+    Access flags: 0x1
+      = public boolean onCreateOptionsMenu(android.view.Menu)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #67
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.getMenuInflater ()Landroid/view/MenuInflater;]
+      [4] ldc #2
+        + Integer [2131230720]
+      [6] aload_1 v1
+      [7] invokevirtual #58
+        + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+      [10] iconst_1
+      [11] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()Z
+    Access flags: 0x1
+      = public boolean a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 40, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.d Landroid/widget/EditText;]
+      [4] invokevirtual #59
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [7] invokevirtual #76
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [10] ldc #6
+        + String []
+      [12] invokevirtual #77
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [15] ifne +21 (target=36)
+      [18] aload_0 v0
+      [19] getfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.e Landroid/widget/EditText;]
+      [22] invokevirtual #59
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [25] invokevirtual #76
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [28] ldc #6
+        + String []
+      [30] invokevirtual #77
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [33] ifeq +5 (target=38)
+      [36] iconst_1
+      [37] ireturn
+      [38] iconst_0
+      [39] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [36] Var: ..., Stack: (empty)
+        - [38] Var: ..., Stack: (empty)
+  + Method:       actionLogin(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void actionLogin(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 415, locals = 11, stack = 8):
+      [0] aload_0 v0
+      [1] invokevirtual #63
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.a ()Z]
+      [4] ifeq +10 (target=14)
+      [7] aload_0 v0
+      [8] ldc #14
+        + String [You must fill all spaces]
+      [10] invokespecial #64
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.a (Ljava/lang/String;)V]
+      [13] return
+      [14] aload_0 v0
+      [15] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.f Landroid/widget/ProgressBar;]
+      [18] iconst_0
+      [19] invokevirtual #60
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [22] new #43
+        + Class [java/lang/Thread]
+      [25] dup
+      [26] new #36
+        + Class [com/rgap/mylostdevice/b]
+      [29] dup
+      [30] aload_0 v0
+      [31] aload_0 v0
+      [32] getfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.d Landroid/widget/EditText;]
+      [35] invokevirtual #59
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [38] invokevirtual #76
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [41] aload_0 v0
+      [42] getfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.e Landroid/widget/EditText;]
+      [45] invokevirtual #59
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [48] invokevirtual #76
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [51] invokespecial #73
+        + Methodref [com/rgap/mylostdevice/b.<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+      [54] invokespecial #83
+        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+      [57] astore_2 v2
+      [58] aload_2 v2
+      [59] invokevirtual #85
+        + Methodref [java/lang/Thread.start ()V]
+      [62] aload_2 v2
+      [63] invokevirtual #84
+        + Methodref [java/lang/Thread.isAlive ()Z]
+      [66] ifeq +6 (target=72)
+      [69] goto -7 (target=62)
+      [72] aload_0 v0
+      [73] ldc #13
+        + String [PrefFile]
+      [75] iconst_0
+      [76] invokevirtual #68
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [79] astore_3 v3
+      [80] aload_3 v3
+      [81] invokeinterface #87
+        + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [86] astore v4
+      [88] aload_0 v0
+      [89] getfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+      [92] ifne +19 (target=111)
+      [95] aload_0 v0
+      [96] ldc #11
+        + String [Incorrect Data]
+      [98] invokespecial #64
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.a (Ljava/lang/String;)V]
+      [101] aload_0 v0
+      [102] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.f Landroid/widget/ProgressBar;]
+      [105] bipush 8
+      [107] invokevirtual #60
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [110] return
+      [111] aload v4
+      [113] ldc #17
+        + String [userid]
+      [115] aload_0 v0
+      [116] getfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+      [119] invokeinterface #90
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+      [124] pop
+      [125] aload v4
+      [127] invokeinterface #89
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [132] pop
+      [133] aload_0 v0
+      [134] iconst_m1
+      [135] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.c I]
+      [138] aload_3 v3
+      [139] ldc #15
+        + String [devid]
+      [141] invokeinterface #86
+        + InterfaceMethodref [android/content/SharedPreferences.contains (Ljava/lang/String;)Z]
+      [146] ifeq +63 (target=209)
+      [149] aload_0 v0
+      [150] aload_3 v3
+      [151] ldc #15
+        + String [devid]
+      [153] iconst_0
+      [154] invokeinterface #88
+        + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+      [159] putfield #48
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.b I]
+      [162] new #43
+        + Class [java/lang/Thread]
+      [165] dup
+      [166] new #37
+        + Class [com/rgap/mylostdevice/c]
+      [169] dup
+      [170] aload_0 v0
+      [171] aload_0 v0
+      [172] getfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+      [175] invokestatic #78
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [178] aload_0 v0
+      [179] getfield #48
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.b I]
+      [182] invokestatic #78
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [185] invokespecial #74
+        + Methodref [com/rgap/mylostdevice/c.<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+      [188] invokespecial #83
+        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+      [191] astore v5
+      [193] aload v5
+      [195] invokevirtual #85
+        + Methodref [java/lang/Thread.start ()V]
+      [198] aload v5
+      [200] invokevirtual #84
+        + Methodref [java/lang/Thread.isAlive ()Z]
+      [203] ifeq +6 (target=209)
+      [206] goto -8 (target=198)
+      [209] aload_0 v0
+      [210] getfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.c I]
+      [213] iconst_1
+      [214] ificmpeq +167 (target=381)
+      [217] new #24
+        + Class [android/util/DisplayMetrics]
+      [220] dup
+      [221] invokespecial #56
+        + Methodref [android/util/DisplayMetrics.<init> ()V]
+      [224] astore v5
+      [226] aload_0 v0
+      [227] invokevirtual #69
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.getWindowManager ()Landroid/view/WindowManager;]
+      [230] invokeinterface #91
+        + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+      [235] aload v5
+      [237] invokevirtual #57
+        + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
+      [240] aload v5
+      [242] getfield #45
+        + Fieldref [android/util/DisplayMetrics.heightPixels I]
+      [245] invokestatic #75
+        + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [248] astore v6
+      [250] aload v5
+      [252] getfield #46
+        + Fieldref [android/util/DisplayMetrics.widthPixels I]
+      [255] invokestatic #75
+        + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [258] astore v7
+      [260] new #41
+        + Class [java/lang/StringBuilder]
+      [263] dup
+      [264] invokespecial #79
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [267] getstatic #44
+        + Fieldref [android/os/Build.MANUFACTURER Ljava/lang/String;]
+      [270] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [273] ldc #8
+        + String [, Dimension: ]
+      [275] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [278] aload v6
+      [280] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [283] ldc #18
+        + String [x]
+      [285] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [288] aload v7
+      [290] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [293] ldc #7
+        + String [, Android: ]
+      [295] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [298] ldc #16
+        + String [os.version]
+      [300] invokestatic #82
+        + Methodref [java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;]
+      [303] invokevirtual #80
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [306] invokevirtual #81
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [309] astore v8
+      [311] ldc #9
+        + String [0]
+      [313] astore v9
+      [315] new #43
+        + Class [java/lang/Thread]
+      [318] dup
+      [319] new #35
+        + Class [com/rgap/mylostdevice/a]
+      [322] dup
+      [323] aload_0 v0
+      [324] aload_0 v0
+      [325] getfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+      [328] invokestatic #78
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [331] aload v8
+      [333] aload v9
+      [335] invokespecial #72
+        + Methodref [com/rgap/mylostdevice/a.<init> (Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+      [338] invokespecial #83
+        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+      [341] astore v10
+      [343] aload v10
+      [345] invokevirtual #85
+        + Methodref [java/lang/Thread.start ()V]
+      [348] aload v10
+      [350] invokevirtual #84
+        + Methodref [java/lang/Thread.isAlive ()Z]
+      [353] ifeq +6 (target=359)
+      [356] goto -8 (target=348)
+      [359] aload v4
+      [361] ldc #15
+        + String [devid]
+      [363] aload_0 v0
+      [364] getfield #48
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.b I]
+      [367] invokeinterface #90
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+      [372] pop
+      [373] aload v4
+      [375] invokeinterface #89
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [380] pop
+      [381] aload_0 v0
+      [382] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.f Landroid/widget/ProgressBar;]
+      [385] bipush 8
+      [387] invokevirtual #60
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [390] new #20
+        + Class [android/content/Intent]
+      [393] dup
+      [394] aload_0 v0
+      [395] ldc #34
+        + Class [com/rgap/mylostdevice/ActivityTabs]
+      [397] invokespecial #55
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [400] astore v5
+      [402] aload_0 v0
+      [403] aload v5
+      [405] invokevirtual #71
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.startActivity (Landroid/content/Intent;)V]
+      [408] aload_0 v0
+      [409] ldc #12
+        + String [Login Successful]
+      [411] invokespecial #64
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.a (Ljava/lang/String;)V]
+      [414] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 9):
+        - [14] Var: ..., Stack: (empty)
+        - [62] Var: ...[a:java/lang/Thread], Stack: (empty)
+        - [72] Var: ..., Stack: (empty)
+        - [111] Var: ...[a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor], Stack: (empty)
+        - [198] Var: ...[a:java/lang/Thread], Stack: (empty)
+        - [209] Var: -1, Stack: (empty)
+        - [348] Var: [a:com/rgap/mylostdevice/ActivityLogin][a:android/view/View][a:java/lang/Thread][a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor][a:android/util/DisplayMetrics][a:java/lang/String][a:java/lang/String][a:java/lang/String][a:java/lang/String][a:java/lang/Thread], Stack: 
+        - [359] Var: ..., Stack: (empty)
+        - [381] Var: [a:com/rgap/mylostdevice/ActivityLogin][a:android/view/View][a:java/lang/Thread][a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor], Stack: 
+  + Method:       actionGoRegister(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void actionGoRegister(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 23, locals = 3, stack = 4):
+      [0] new #20
+        + Class [android/content/Intent]
+      [3] dup
+      [4] aload_0 v0
+      [5] ldc #33
+        + Class [com/rgap/mylostdevice/ActivityRegister]
+      [7] invokespecial #55
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [10] astore_2 v2
+      [11] aload_0 v0
+      [12] aload_2 v2
+      [13] invokevirtual #71
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.startActivity (Landroid/content/Intent;)V]
+      [16] aload_0 v0
+      [17] ldc #10
+        + String [Going to register page]
+      [19] invokespecial #64
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.a (Ljava/lang/String;)V]
+      [22] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void a(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 21, locals = 5, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #66
+        + Methodref [com/rgap/mylostdevice/ActivityLogin.getApplicationContext ()Landroid/content/Context;]
+      [4] astore_2 v2
+      [5] iconst_1
+      [6] istore_3 v3
+      [7] aload_2 v2
+      [8] aload_1 v1
+      [9] iload_3 v3
+      [10] invokestatic #61
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [13] astore v4
+      [15] aload v4
+      [17] invokevirtual #62
+        + Methodref [android/widget/Toast.show ()V]
+      [20] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/a
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.a extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [java/lang/Runnable]
+
+Constant Pool (count = 134):
+  + String [Exception ]
+  + String [actReg]
+  + String [devlocation]
+  + String [devtype]
+  + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php]
+  + String [resp]
+  + String [userid]
+  + Class [android/util/Log]
+  + Class [com/rgap/mylostdevice/ActivityLogin]
+  + Class [com/rgap/mylostdevice/a]
+  + Class [java/io/ByteArrayOutputStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/Runnable]
+  + Class [java/lang/StringBuilder]
+  + Class [java/util/ArrayList]
+  + Class [java/util/List]
+  + Class [org/apache/http/HttpEntity]
+  + Class [org/apache/http/HttpResponse]
+  + Class [org/apache/http/client/HttpClient]
+  + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Class [org/apache/http/client/methods/HttpPost]
+  + Class [org/apache/http/impl/client/DefaultHttpClient]
+  + Class [org/apache/http/message/BasicNameValuePair]
+  + Class [org/json/JSONObject]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.b I]
+  + Fieldref [com/rgap/mylostdevice/a.a Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/a.b Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/a.c Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/a.d Lcom/rgap/mylostdevice/ActivityLogin;]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+  + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+  + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+  + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+  + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+  + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/util/List;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b I]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c Ljava/lang/String;]
+  + NameAndType [d Lcom/rgap/mylostdevice/ActivityLogin;]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [getEntity ()Lorg/apache/http/HttpEntity;]
+  + NameAndType [getString (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [parseInt (Ljava/lang/String;)I]
+  + NameAndType [setEntity (Lorg/apache/http/HttpEntity;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [writeTo (Ljava/io/OutputStream;)V]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Lorg/apache/http/HttpEntity;]
+  + Utf8 [()V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/util/List;)V]
+  + Utf8 [(Lorg/apache/http/HttpEntity;)V]
+  + Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Exception ]
+  + Utf8 [I]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityLogin;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [actReg]
+  + Utf8 [add]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityLogin]
+  + Utf8 [com/rgap/mylostdevice/a]
+  + Utf8 [d]
+  + Utf8 [devlocation]
+  + Utf8 [devtype]
+  + Utf8 [e]
+  + Utf8 [execute]
+  + Utf8 [getEntity]
+  + Utf8 [getString]
+  + Utf8 [http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php]
+  + Utf8 [java/io/ByteArrayOutputStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [java/util/List]
+  + Utf8 [org/apache/http/HttpEntity]
+  + Utf8 [org/apache/http/HttpResponse]
+  + Utf8 [org/apache/http/client/HttpClient]
+  + Utf8 [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Utf8 [org/apache/http/client/methods/HttpPost]
+  + Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  + Utf8 [org/apache/http/message/BasicNameValuePair]
+  + Utf8 [org/json/JSONObject]
+  + Utf8 [parseInt]
+  + Utf8 [resp]
+  + Utf8 [run]
+  + Utf8 [setEntity]
+  + Utf8 [toString]
+  + Utf8 [userid]
+  + Utf8 [writeTo]
+
+Fields (count = 4):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+  + Field:        c Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String c
+  + Field:        d Lcom/rgap/mylostdevice/ActivityLogin;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityLogin d
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x0
+      = a(com.rgap.mylostdevice.ActivityLogin,java.lang.String,java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 26, locals = 5, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #31
+        + Fieldref [com/rgap/mylostdevice/a.d Lcom/rgap/mylostdevice/ActivityLogin;]
+      [5] aload_0 v0
+      [6] invokespecial #37
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] aload_0 v0
+      [10] aload_2 v2
+      [11] putfield #28
+        + Fieldref [com/rgap/mylostdevice/a.a Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] aload_3 v3
+      [16] putfield #30
+        + Fieldref [com/rgap/mylostdevice/a.c Ljava/lang/String;]
+      [19] aload_0 v0
+      [20] aload v4
+      [22] putfield #29
+        + Fieldref [com/rgap/mylostdevice/a.b Ljava/lang/String;]
+      [25] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x1
+      = public void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 198, locals = 8, stack = 5):
+      [0] new #24
+        + Class [org/apache/http/impl/client/DefaultHttpClient]
+      [3] dup
+      [4] invokespecial #45
+        + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [7] astore_1 v1
+      [8] new #23
+        + Class [org/apache/http/client/methods/HttpPost]
+      [11] dup
+      [12] ldc #5
+        + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php]
+      [14] invokespecial #43
+        + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+      [17] astore_2 v2
+      [18] new #17
+        + Class [java/util/ArrayList]
+      [21] dup
+      [22] invokespecial #41
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [25] astore_3 v3
+      [26] aload_3 v3
+      [27] new #25
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [30] dup
+      [31] ldc #7
+        + String [userid]
+      [33] aload_0 v0
+      [34] getfield #28
+        + Fieldref [com/rgap/mylostdevice/a.a Ljava/lang/String;]
+      [37] invokespecial #46
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [40] invokeinterface #49
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [45] pop
+      [46] aload_3 v3
+      [47] new #25
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [50] dup
+      [51] ldc #4
+        + String [devtype]
+      [53] aload_0 v0
+      [54] getfield #30
+        + Fieldref [com/rgap/mylostdevice/a.c Ljava/lang/String;]
+      [57] invokespecial #46
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [60] invokeinterface #49
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [65] pop
+      [66] aload_3 v3
+      [67] new #25
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [70] dup
+      [71] ldc #3
+        + String [devlocation]
+      [73] aload_0 v0
+      [74] getfield #29
+        + Fieldref [com/rgap/mylostdevice/a.b Ljava/lang/String;]
+      [77] invokespecial #46
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [80] invokeinterface #49
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [85] pop
+      [86] aload_2 v2
+      [87] new #22
+        + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+      [90] dup
+      [91] aload_3 v3
+      [92] invokespecial #42
+        + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+      [95] invokevirtual #44
+        + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+      [98] aload_1 v1
+      [99] aload_2 v2
+      [100] invokeinterface #52
+        + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [105] astore v4
+      [107] new #11
+        + Class [java/io/ByteArrayOutputStream]
+      [110] dup
+      [111] invokespecial #33
+        + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+      [114] astore v5
+      [116] aload v4
+      [118] invokeinterface #51
+        + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+      [123] aload v5
+      [125] invokeinterface #50
+        + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+      [130] aload v5
+      [132] invokevirtual #34
+        + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+      [135] astore v6
+      [137] new #26
+        + Class [org/json/JSONObject]
+      [140] dup
+      [141] aload v6
+      [143] invokespecial #47
+        + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+      [146] astore v7
+      [148] aload_0 v0
+      [149] getfield #31
+        + Fieldref [com/rgap/mylostdevice/a.d Lcom/rgap/mylostdevice/ActivityLogin;]
+      [152] aload v7
+      [154] ldc #6
+        + String [resp]
+      [156] invokevirtual #48
+        + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [159] invokestatic #36
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [162] putfield #27
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.b I]
+      [165] goto +32 (target=197)
+      [168] astore_3 v3
+      [169] ldc #2
+        + String [actReg]
+      [171] new #16
+        + Class [java/lang/StringBuilder]
+      [174] dup
+      [175] invokespecial #38
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [178] ldc #1
+        + String [Exception ]
+      [180] invokevirtual #39
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [183] aload_3 v3
+      [184] invokevirtual #35
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [187] invokevirtual #39
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [190] invokevirtual #40
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [193] invokestatic #32
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [196] pop
+      [197] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (18 -> 165: 168):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [168] Var: [a:com/rgap/mylostdevice/a][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost], Stack: [a:java/lang/Exception]
+        - [197] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/b
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.b extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [java/lang/Runnable]
+
+Constant Pool (count = 129):
+  + String [Exception ]
+  + String [addReg]
+  + String [http://relguzman.com/MyLostDevice/controller_client/corUserCheck.php]
+  + String [password]
+  + String [resp]
+  + String [username]
+  + Class [android/util/Log]
+  + Class [com/rgap/mylostdevice/ActivityLogin]
+  + Class [com/rgap/mylostdevice/b]
+  + Class [java/io/ByteArrayOutputStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/Runnable]
+  + Class [java/lang/StringBuilder]
+  + Class [java/util/ArrayList]
+  + Class [java/util/List]
+  + Class [org/apache/http/HttpEntity]
+  + Class [org/apache/http/HttpResponse]
+  + Class [org/apache/http/client/HttpClient]
+  + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Class [org/apache/http/client/methods/HttpPost]
+  + Class [org/apache/http/impl/client/DefaultHttpClient]
+  + Class [org/apache/http/message/BasicNameValuePair]
+  + Class [org/json/JSONObject]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+  + Fieldref [com/rgap/mylostdevice/b.a Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/b.b Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/b.c Lcom/rgap/mylostdevice/ActivityLogin;]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+  + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+  + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+  + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+  + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+  + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/util/List;)V]
+  + NameAndType [a I]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c Lcom/rgap/mylostdevice/ActivityLogin;]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [getEntity ()Lorg/apache/http/HttpEntity;]
+  + NameAndType [getString (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [parseInt (Ljava/lang/String;)I]
+  + NameAndType [setEntity (Lorg/apache/http/HttpEntity;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [writeTo (Ljava/io/OutputStream;)V]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Lorg/apache/http/HttpEntity;]
+  + Utf8 [()V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/util/List;)V]
+  + Utf8 [(Lorg/apache/http/HttpEntity;)V]
+  + Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Exception ]
+  + Utf8 [I]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityLogin;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [addReg]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityLogin]
+  + Utf8 [com/rgap/mylostdevice/b]
+  + Utf8 [e]
+  + Utf8 [execute]
+  + Utf8 [getEntity]
+  + Utf8 [getString]
+  + Utf8 [http://relguzman.com/MyLostDevice/controller_client/corUserCheck.php]
+  + Utf8 [java/io/ByteArrayOutputStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [java/util/List]
+  + Utf8 [org/apache/http/HttpEntity]
+  + Utf8 [org/apache/http/HttpResponse]
+  + Utf8 [org/apache/http/client/HttpClient]
+  + Utf8 [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Utf8 [org/apache/http/client/methods/HttpPost]
+  + Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  + Utf8 [org/apache/http/message/BasicNameValuePair]
+  + Utf8 [org/json/JSONObject]
+  + Utf8 [parseInt]
+  + Utf8 [password]
+  + Utf8 [resp]
+  + Utf8 [run]
+  + Utf8 [setEntity]
+  + Utf8 [toString]
+  + Utf8 [username]
+  + Utf8 [writeTo]
+
+Fields (count = 3):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+  + Field:        c Lcom/rgap/mylostdevice/ActivityLogin;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityLogin c
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x0
+      = b(com.rgap.mylostdevice.ActivityLogin,java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 4, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #29
+        + Fieldref [com/rgap/mylostdevice/b.c Lcom/rgap/mylostdevice/ActivityLogin;]
+      [5] aload_0 v0
+      [6] invokespecial #35
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] aload_0 v0
+      [10] aload_2 v2
+      [11] putfield #27
+        + Fieldref [com/rgap/mylostdevice/b.a Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] aload_3 v3
+      [16] putfield #28
+        + Fieldref [com/rgap/mylostdevice/b.b Ljava/lang/String;]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x1
+      = public void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 178, locals = 8, stack = 5):
+      [0] new #23
+        + Class [org/apache/http/impl/client/DefaultHttpClient]
+      [3] dup
+      [4] invokespecial #43
+        + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [7] astore_1 v1
+      [8] new #22
+        + Class [org/apache/http/client/methods/HttpPost]
+      [11] dup
+      [12] ldc #3
+        + String [http://relguzman.com/MyLostDevice/controller_client/corUserCheck.php]
+      [14] invokespecial #41
+        + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+      [17] astore_2 v2
+      [18] new #16
+        + Class [java/util/ArrayList]
+      [21] dup
+      [22] invokespecial #39
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [25] astore_3 v3
+      [26] aload_3 v3
+      [27] new #24
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [30] dup
+      [31] ldc #6
+        + String [username]
+      [33] aload_0 v0
+      [34] getfield #27
+        + Fieldref [com/rgap/mylostdevice/b.a Ljava/lang/String;]
+      [37] invokespecial #44
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [40] invokeinterface #47
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [45] pop
+      [46] aload_3 v3
+      [47] new #24
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [50] dup
+      [51] ldc #4
+        + String [password]
+      [53] aload_0 v0
+      [54] getfield #28
+        + Fieldref [com/rgap/mylostdevice/b.b Ljava/lang/String;]
+      [57] invokespecial #44
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [60] invokeinterface #47
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [65] pop
+      [66] aload_2 v2
+      [67] new #21
+        + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+      [70] dup
+      [71] aload_3 v3
+      [72] invokespecial #40
+        + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+      [75] invokevirtual #42
+        + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+      [78] aload_1 v1
+      [79] aload_2 v2
+      [80] invokeinterface #50
+        + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [85] astore v4
+      [87] new #10
+        + Class [java/io/ByteArrayOutputStream]
+      [90] dup
+      [91] invokespecial #31
+        + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+      [94] astore v5
+      [96] aload v4
+      [98] invokeinterface #49
+        + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+      [103] aload v5
+      [105] invokeinterface #48
+        + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+      [110] aload v5
+      [112] invokevirtual #32
+        + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+      [115] astore v6
+      [117] new #25
+        + Class [org/json/JSONObject]
+      [120] dup
+      [121] aload v6
+      [123] invokespecial #45
+        + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+      [126] astore v7
+      [128] aload_0 v0
+      [129] getfield #29
+        + Fieldref [com/rgap/mylostdevice/b.c Lcom/rgap/mylostdevice/ActivityLogin;]
+      [132] aload v7
+      [134] ldc #5
+        + String [resp]
+      [136] invokevirtual #46
+        + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [139] invokestatic #34
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [142] putfield #26
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.a I]
+      [145] goto +32 (target=177)
+      [148] astore_3 v3
+      [149] ldc #2
+        + String [addReg]
+      [151] new #15
+        + Class [java/lang/StringBuilder]
+      [154] dup
+      [155] invokespecial #36
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [158] ldc #1
+        + String [Exception ]
+      [160] invokevirtual #37
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [163] aload_3 v3
+      [164] invokevirtual #33
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [167] invokevirtual #37
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [170] invokevirtual #38
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [173] invokestatic #30
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [176] pop
+      [177] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (18 -> 145: 148):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [148] Var: [a:com/rgap/mylostdevice/b][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost], Stack: [a:java/lang/Exception]
+        - [177] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/c
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.c extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [java/lang/Runnable]
+
+Constant Pool (count = 129):
+  + String [Exception ]
+  + String [addReg]
+  + String [devid]
+  + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceSearch.php]
+  + String [resp]
+  + String [userid]
+  + Class [android/util/Log]
+  + Class [com/rgap/mylostdevice/ActivityLogin]
+  + Class [com/rgap/mylostdevice/c]
+  + Class [java/io/ByteArrayOutputStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/Runnable]
+  + Class [java/lang/StringBuilder]
+  + Class [java/util/ArrayList]
+  + Class [java/util/List]
+  + Class [org/apache/http/HttpEntity]
+  + Class [org/apache/http/HttpResponse]
+  + Class [org/apache/http/client/HttpClient]
+  + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Class [org/apache/http/client/methods/HttpPost]
+  + Class [org/apache/http/impl/client/DefaultHttpClient]
+  + Class [org/apache/http/message/BasicNameValuePair]
+  + Class [org/json/JSONObject]
+  + Fieldref [com/rgap/mylostdevice/ActivityLogin.c I]
+  + Fieldref [com/rgap/mylostdevice/c.a Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/c.b Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/c.c Lcom/rgap/mylostdevice/ActivityLogin;]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+  + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+  + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+  + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+  + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+  + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/util/List;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c I]
+  + NameAndType [c Lcom/rgap/mylostdevice/ActivityLogin;]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [getEntity ()Lorg/apache/http/HttpEntity;]
+  + NameAndType [getString (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [parseInt (Ljava/lang/String;)I]
+  + NameAndType [setEntity (Lorg/apache/http/HttpEntity;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [writeTo (Ljava/io/OutputStream;)V]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Lorg/apache/http/HttpEntity;]
+  + Utf8 [()V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/util/List;)V]
+  + Utf8 [(Lorg/apache/http/HttpEntity;)V]
+  + Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Exception ]
+  + Utf8 [I]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityLogin;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [addReg]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityLogin]
+  + Utf8 [com/rgap/mylostdevice/c]
+  + Utf8 [devid]
+  + Utf8 [e]
+  + Utf8 [execute]
+  + Utf8 [getEntity]
+  + Utf8 [getString]
+  + Utf8 [http://relguzman.com/MyLostDevice/controller_client/corDeviceSearch.php]
+  + Utf8 [java/io/ByteArrayOutputStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [java/util/List]
+  + Utf8 [org/apache/http/HttpEntity]
+  + Utf8 [org/apache/http/HttpResponse]
+  + Utf8 [org/apache/http/client/HttpClient]
+  + Utf8 [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Utf8 [org/apache/http/client/methods/HttpPost]
+  + Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  + Utf8 [org/apache/http/message/BasicNameValuePair]
+  + Utf8 [org/json/JSONObject]
+  + Utf8 [parseInt]
+  + Utf8 [resp]
+  + Utf8 [run]
+  + Utf8 [setEntity]
+  + Utf8 [toString]
+  + Utf8 [userid]
+  + Utf8 [writeTo]
+
+Fields (count = 3):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+  + Field:        c Lcom/rgap/mylostdevice/ActivityLogin;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityLogin c
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityLogin;Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x0
+      = c(com.rgap.mylostdevice.ActivityLogin,java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 4, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #29
+        + Fieldref [com/rgap/mylostdevice/c.c Lcom/rgap/mylostdevice/ActivityLogin;]
+      [5] aload_0 v0
+      [6] invokespecial #35
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] aload_0 v0
+      [10] aload_2 v2
+      [11] putfield #27
+        + Fieldref [com/rgap/mylostdevice/c.a Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] aload_3 v3
+      [16] putfield #28
+        + Fieldref [com/rgap/mylostdevice/c.b Ljava/lang/String;]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x1
+      = public void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 178, locals = 8, stack = 5):
+      [0] new #23
+        + Class [org/apache/http/impl/client/DefaultHttpClient]
+      [3] dup
+      [4] invokespecial #43
+        + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [7] astore_1 v1
+      [8] new #22
+        + Class [org/apache/http/client/methods/HttpPost]
+      [11] dup
+      [12] ldc #4
+        + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceSearch.php]
+      [14] invokespecial #41
+        + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+      [17] astore_2 v2
+      [18] new #16
+        + Class [java/util/ArrayList]
+      [21] dup
+      [22] invokespecial #39
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [25] astore_3 v3
+      [26] aload_3 v3
+      [27] new #24
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [30] dup
+      [31] ldc #6
+        + String [userid]
+      [33] aload_0 v0
+      [34] getfield #27
+        + Fieldref [com/rgap/mylostdevice/c.a Ljava/lang/String;]
+      [37] invokespecial #44
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [40] invokeinterface #47
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [45] pop
+      [46] aload_3 v3
+      [47] new #24
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [50] dup
+      [51] ldc #3
+        + String [devid]
+      [53] aload_0 v0
+      [54] getfield #28
+        + Fieldref [com/rgap/mylostdevice/c.b Ljava/lang/String;]
+      [57] invokespecial #44
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [60] invokeinterface #47
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [65] pop
+      [66] aload_2 v2
+      [67] new #21
+        + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+      [70] dup
+      [71] aload_3 v3
+      [72] invokespecial #40
+        + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+      [75] invokevirtual #42
+        + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+      [78] aload_1 v1
+      [79] aload_2 v2
+      [80] invokeinterface #50
+        + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [85] astore v4
+      [87] new #10
+        + Class [java/io/ByteArrayOutputStream]
+      [90] dup
+      [91] invokespecial #31
+        + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+      [94] astore v5
+      [96] aload v4
+      [98] invokeinterface #49
+        + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+      [103] aload v5
+      [105] invokeinterface #48
+        + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+      [110] aload v5
+      [112] invokevirtual #32
+        + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+      [115] astore v6
+      [117] new #25
+        + Class [org/json/JSONObject]
+      [120] dup
+      [121] aload v6
+      [123] invokespecial #45
+        + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+      [126] astore v7
+      [128] aload_0 v0
+      [129] getfield #29
+        + Fieldref [com/rgap/mylostdevice/c.c Lcom/rgap/mylostdevice/ActivityLogin;]
+      [132] aload v7
+      [134] ldc #5
+        + String [resp]
+      [136] invokevirtual #46
+        + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [139] invokestatic #34
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [142] putfield #26
+        + Fieldref [com/rgap/mylostdevice/ActivityLogin.c I]
+      [145] goto +32 (target=177)
+      [148] astore_3 v3
+      [149] ldc #2
+        + String [addReg]
+      [151] new #15
+        + Class [java/lang/StringBuilder]
+      [154] dup
+      [155] invokespecial #36
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [158] ldc #1
+        + String [Exception ]
+      [160] invokevirtual #37
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [163] aload_3 v3
+      [164] invokevirtual #33
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [167] invokevirtual #37
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [170] invokevirtual #38
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [173] invokestatic #30
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [176] pop
+      [177] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (18 -> 145: 148):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [148] Var: [a:com/rgap/mylostdevice/c][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost], Stack: [a:java/lang/Exception]
+        - [177] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/ActivityRegister
+  Superclass:    android/app/Activity
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.rgap.mylostdevice.ActivityRegister extends android.app.Activity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 236):
+  + Integer [2130903042]
+  + Integer [2131230720]
+  + Integer [2131296265]
+  + Integer [2131296266]
+  + Integer [2131296267]
+  + String []
+  + String [, Android: ]
+  + String [, Dimension: ]
+  + String [0]
+  + String [Device and User Registered]
+  + String [PrefFile]
+  + String [User already registered]
+  + String [You must fill all spaces]
+  + String [devid]
+  + String [os.version]
+  + String [userid]
+  + String [x]
+  + Class [android/app/Activity]
+  + Class [android/content/Intent]
+  + Class [android/content/SharedPreferences]
+  + Class [android/content/SharedPreferences$Editor]
+  + Class [android/os/Build]
+  + Class [android/util/DisplayMetrics]
+  + Class [android/view/Display]
+  + Class [android/view/MenuInflater]
+  + Class [android/view/View]
+  + Class [android/view/WindowManager]
+  + Class [android/widget/EditText]
+  + Class [android/widget/ProgressBar]
+  + Class [android/widget/Toast]
+  + Class [com/rgap/mylostdevice/ActivityRegister]
+  + Class [com/rgap/mylostdevice/ActivityTabs]
+  + Class [com/rgap/mylostdevice/d]
+  + Class [com/rgap/mylostdevice/e]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/System]
+  + Class [java/lang/Thread]
+  + Fieldref [android/os/Build.MANUFACTURER Ljava/lang/String;]
+  + Fieldref [android/util/DisplayMetrics.heightPixels I]
+  + Fieldref [android/util/DisplayMetrics.widthPixels I]
+  + Fieldref [com/rgap/mylostdevice/ActivityRegister.a Landroid/widget/EditText;]
+  + Fieldref [com/rgap/mylostdevice/ActivityRegister.b Landroid/widget/EditText;]
+  + Fieldref [com/rgap/mylostdevice/ActivityRegister.c Landroid/widget/ProgressBar;]
+  + Fieldref [com/rgap/mylostdevice/ActivityRegister.d I]
+  + Fieldref [com/rgap/mylostdevice/ActivityRegister.e I]
+  + Fieldref [com/rgap/mylostdevice/ActivityRegister.f I]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [android/util/DisplayMetrics.<init> ()V]
+  + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
+  + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+  + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+  + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+  + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Methodref [android/widget/Toast.show ()V]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.a ()Z]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.findViewById (I)Landroid/view/View;]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.getApplicationContext ()Landroid/content/Context;]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.getMenuInflater ()Landroid/view/MenuInflater;]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.getWindowManager ()Landroid/view/WindowManager;]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.setContentView (I)V]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.startActivity (Landroid/content/Intent;)V]
+  + Methodref [com/rgap/mylostdevice/d.<init> (Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/e.<init> (Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+  + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;]
+  + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+  + Methodref [java/lang/Thread.isAlive ()Z]
+  + Methodref [java/lang/Thread.start ()V]
+  + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+  + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [<init> (Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/Runnable;)V]
+  + NameAndType [MANUFACTURER Ljava/lang/String;]
+  + NameAndType [a ()Z]
+  + NameAndType [a (Ljava/lang/String;)V]
+  + NameAndType [a Landroid/widget/EditText;]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Landroid/widget/EditText;]
+  + NameAndType [c Landroid/widget/ProgressBar;]
+  + NameAndType [commit ()Z]
+  + NameAndType [d I]
+  + NameAndType [e I]
+  + NameAndType [edit ()Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [equals (Ljava/lang/Object;)Z]
+  + NameAndType [f I]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
+  + NameAndType [getMetrics (Landroid/util/DisplayMetrics;)V]
+  + NameAndType [getProperty (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + NameAndType [getText ()Landroid/text/Editable;]
+  + NameAndType [getWindowManager ()Landroid/view/WindowManager;]
+  + NameAndType [heightPixels I]
+  + NameAndType [inflate (ILandroid/view/Menu;)V]
+  + NameAndType [isAlive ()Z]
+  + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setVisibility (I)V]
+  + NameAndType [show ()V]
+  + NameAndType [start ()V]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [toString (I)Ljava/lang/String;]
+  + NameAndType [valueOf (I)Ljava/lang/String;]
+  + NameAndType [widthPixels I]
+  + Utf8 []
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [()Landroid/text/Editable;]
+  + Utf8 [()Landroid/view/Display;]
+  + Utf8 [()Landroid/view/MenuInflater;]
+  + Utf8 [()Landroid/view/WindowManager;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(I)V]
+  + Utf8 [(ILandroid/view/Menu;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/util/DisplayMetrics;)V]
+  + Utf8 [(Landroid/view/Menu;)Z]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/Runnable;)V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Utf8 [, Android: ]
+  + Utf8 [, Dimension: ]
+  + Utf8 [0]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Device and User Registered]
+  + Utf8 [I]
+  + Utf8 [Landroid/widget/EditText;]
+  + Utf8 [Landroid/widget/ProgressBar;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [MANUFACTURER]
+  + Utf8 [PrefFile]
+  + Utf8 [StackMapTable]
+  + Utf8 [User already registered]
+  + Utf8 [You must fill all spaces]
+  + Utf8 [a]
+  + Utf8 [actionRegister]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/SharedPreferences]
+  + Utf8 [android/content/SharedPreferences$Editor]
+  + Utf8 [android/os/Build]
+  + Utf8 [android/util/DisplayMetrics]
+  + Utf8 [android/view/Display]
+  + Utf8 [android/view/MenuInflater]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/WindowManager]
+  + Utf8 [android/widget/EditText]
+  + Utf8 [android/widget/ProgressBar]
+  + Utf8 [android/widget/Toast]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityRegister]
+  + Utf8 [com/rgap/mylostdevice/ActivityTabs]
+  + Utf8 [com/rgap/mylostdevice/d]
+  + Utf8 [com/rgap/mylostdevice/e]
+  + Utf8 [commit]
+  + Utf8 [d]
+  + Utf8 [devid]
+  + Utf8 [e]
+  + Utf8 [edit]
+  + Utf8 [equals]
+  + Utf8 [f]
+  + Utf8 [findViewById]
+  + Utf8 [getApplicationContext]
+  + Utf8 [getDefaultDisplay]
+  + Utf8 [getMenuInflater]
+  + Utf8 [getMetrics]
+  + Utf8 [getProperty]
+  + Utf8 [getSharedPreferences]
+  + Utf8 [getText]
+  + Utf8 [getWindowManager]
+  + Utf8 [heightPixels]
+  + Utf8 [inflate]
+  + Utf8 [isAlive]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/System]
+  + Utf8 [java/lang/Thread]
+  + Utf8 [makeText]
+  + Utf8 [onCreate]
+  + Utf8 [onCreateOptionsMenu]
+  + Utf8 [os.version]
+  + Utf8 [putInt]
+  + Utf8 [setContentView]
+  + Utf8 [setVisibility]
+  + Utf8 [show]
+  + Utf8 [start]
+  + Utf8 [startActivity]
+  + Utf8 [toString]
+  + Utf8 [userid]
+  + Utf8 [valueOf]
+  + Utf8 [widthPixels]
+  + Utf8 [x]
+
+Fields (count = 6):
+  + Field:        a Landroid/widget/EditText;
+    Access flags: 0x2
+      = private android.widget.EditText a
+  + Field:        b Landroid/widget/EditText;
+    Access flags: 0x2
+      = private android.widget.EditText b
+  + Field:        c Landroid/widget/ProgressBar;
+    Access flags: 0x2
+      = private android.widget.ProgressBar c
+  + Field:        d I
+    Access flags: 0x2
+      = private int d
+  + Field:        e I
+    Access flags: 0x2
+      = private int e
+  + Field:        f I
+    Access flags: 0x2
+      = private int f
+
+Methods (count = 9):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public ActivityRegister()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #50
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 65, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #51
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #1
+        + Integer [2130903042]
+      [8] invokevirtual #67
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.setContentView (I)V]
+      [11] aload_0 v0
+      [12] aload_0 v0
+      [13] ldc #3
+        + Integer [2131296265]
+      [15] invokevirtual #62
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.findViewById (I)Landroid/view/View;]
+      [18] checkcast #28
+        + Class [android/widget/EditText]
+      [21] putfield #44
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.a Landroid/widget/EditText;]
+      [24] aload_0 v0
+      [25] aload_0 v0
+      [26] ldc #4
+        + Integer [2131296266]
+      [28] invokevirtual #62
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.findViewById (I)Landroid/view/View;]
+      [31] checkcast #28
+        + Class [android/widget/EditText]
+      [34] putfield #45
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.b Landroid/widget/EditText;]
+      [37] aload_0 v0
+      [38] aload_0 v0
+      [39] ldc #5
+        + Integer [2131296267]
+      [41] invokevirtual #62
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.findViewById (I)Landroid/view/View;]
+      [44] checkcast #29
+        + Class [android/widget/ProgressBar]
+      [47] putfield #46
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.c Landroid/widget/ProgressBar;]
+      [50] aload_0 v0
+      [51] getfield #46
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.c Landroid/widget/ProgressBar;]
+      [54] bipush 8
+      [56] invokevirtual #57
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [59] aload_0 v0
+      [60] iconst_1
+      [61] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.f I]
+      [64] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreateOptionsMenu(Landroid/view/Menu;)Z
+    Access flags: 0x1
+      = public boolean onCreateOptionsMenu(android.view.Menu)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #64
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.getMenuInflater ()Landroid/view/MenuInflater;]
+      [4] ldc #2
+        + Integer [2131230720]
+      [6] aload_1 v1
+      [7] invokevirtual #55
+        + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+      [10] iconst_1
+      [11] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()Z
+    Access flags: 0x1
+      = public boolean a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 40, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #44
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.a Landroid/widget/EditText;]
+      [4] invokevirtual #56
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [7] invokevirtual #72
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [10] ldc #6
+        + String []
+      [12] invokevirtual #73
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [15] ifne +21 (target=36)
+      [18] aload_0 v0
+      [19] getfield #45
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.b Landroid/widget/EditText;]
+      [22] invokevirtual #56
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [25] invokevirtual #72
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [28] ldc #6
+        + String []
+      [30] invokevirtual #73
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [33] ifeq +5 (target=38)
+      [36] iconst_1
+      [37] ireturn
+      [38] iconst_0
+      [39] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [36] Var: ..., Stack: (empty)
+        - [38] Var: ..., Stack: (empty)
+  + Method:       actionRegister(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void actionRegister(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 331, locals = 12, stack = 8):
+      [0] aload_0 v0
+      [1] invokevirtual #60
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.a ()Z]
+      [4] ifeq +10 (target=14)
+      [7] aload_0 v0
+      [8] ldc #13
+        + String [You must fill all spaces]
+      [10] invokespecial #61
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Ljava/lang/String;)V]
+      [13] return
+      [14] aload_0 v0
+      [15] getfield #46
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.c Landroid/widget/ProgressBar;]
+      [18] iconst_0
+      [19] invokevirtual #57
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [22] new #40
+        + Class [java/lang/Thread]
+      [25] dup
+      [26] new #34
+        + Class [com/rgap/mylostdevice/e]
+      [29] dup
+      [30] aload_0 v0
+      [31] aload_0 v0
+      [32] getfield #44
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.a Landroid/widget/EditText;]
+      [35] invokevirtual #56
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [38] invokevirtual #72
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [41] aload_0 v0
+      [42] getfield #45
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.b Landroid/widget/EditText;]
+      [45] invokevirtual #56
+        + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
+      [48] invokevirtual #72
+        + Methodref [java/lang/Object.toString ()Ljava/lang/String;]
+      [51] invokespecial #70
+        + Methodref [com/rgap/mylostdevice/e.<init> (Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;)V]
+      [54] invokespecial #79
+        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+      [57] astore_2 v2
+      [58] aload_2 v2
+      [59] invokevirtual #81
+        + Methodref [java/lang/Thread.start ()V]
+      [62] aload_2 v2
+      [63] invokevirtual #80
+        + Methodref [java/lang/Thread.isAlive ()Z]
+      [66] ifeq +6 (target=72)
+      [69] goto -7 (target=62)
+      [72] aload_0 v0
+      [73] getfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.f I]
+      [76] ifne +19 (target=95)
+      [79] aload_0 v0
+      [80] getfield #46
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.c Landroid/widget/ProgressBar;]
+      [83] bipush 8
+      [85] invokevirtual #57
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [88] aload_0 v0
+      [89] ldc #12
+        + String [User already registered]
+      [91] invokespecial #61
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Ljava/lang/String;)V]
+      [94] return
+      [95] aload_0 v0
+      [96] ldc #11
+        + String [PrefFile]
+      [98] iconst_0
+      [99] invokevirtual #65
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [102] astore_3 v3
+      [103] aload_3 v3
+      [104] invokeinterface #82
+        + InterfaceMethodref [android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor;]
+      [109] astore v4
+      [111] aload v4
+      [113] ldc #16
+        + String [userid]
+      [115] aload_0 v0
+      [116] getfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.d I]
+      [119] invokeinterface #84
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+      [124] pop
+      [125] aload v4
+      [127] invokeinterface #83
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [132] pop
+      [133] new #23
+        + Class [android/util/DisplayMetrics]
+      [136] dup
+      [137] invokespecial #53
+        + Methodref [android/util/DisplayMetrics.<init> ()V]
+      [140] astore v5
+      [142] aload_0 v0
+      [143] invokevirtual #66
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.getWindowManager ()Landroid/view/WindowManager;]
+      [146] invokeinterface #85
+        + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+      [151] aload v5
+      [153] invokevirtual #54
+        + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
+      [156] aload v5
+      [158] getfield #42
+        + Fieldref [android/util/DisplayMetrics.heightPixels I]
+      [161] invokestatic #71
+        + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [164] astore v6
+      [166] aload v5
+      [168] getfield #43
+        + Fieldref [android/util/DisplayMetrics.widthPixels I]
+      [171] invokestatic #71
+        + Methodref [java/lang/Integer.toString (I)Ljava/lang/String;]
+      [174] astore v7
+      [176] new #38
+        + Class [java/lang/StringBuilder]
+      [179] dup
+      [180] invokespecial #75
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [183] getstatic #41
+        + Fieldref [android/os/Build.MANUFACTURER Ljava/lang/String;]
+      [186] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [189] ldc #8
+        + String [, Dimension: ]
+      [191] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [194] aload v6
+      [196] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [199] ldc #17
+        + String [x]
+      [201] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [204] aload v7
+      [206] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [209] ldc #7
+        + String [, Android: ]
+      [211] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [214] ldc #15
+        + String [os.version]
+      [216] invokestatic #78
+        + Methodref [java/lang/System.getProperty (Ljava/lang/String;)Ljava/lang/String;]
+      [219] invokevirtual #76
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [222] invokevirtual #77
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [225] astore v8
+      [227] ldc #9
+        + String [0]
+      [229] astore v9
+      [231] new #40
+        + Class [java/lang/Thread]
+      [234] dup
+      [235] new #33
+        + Class [com/rgap/mylostdevice/d]
+      [238] dup
+      [239] aload_0 v0
+      [240] aload_0 v0
+      [241] getfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.d I]
+      [244] invokestatic #74
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [247] aload v8
+      [249] aload v9
+      [251] invokespecial #69
+        + Methodref [com/rgap/mylostdevice/d.<init> (Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+      [254] invokespecial #79
+        + Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+      [257] astore v10
+      [259] aload v10
+      [261] invokevirtual #81
+        + Methodref [java/lang/Thread.start ()V]
+      [264] aload v10
+      [266] invokevirtual #80
+        + Methodref [java/lang/Thread.isAlive ()Z]
+      [269] ifeq +6 (target=275)
+      [272] goto -8 (target=264)
+      [275] aload v4
+      [277] ldc #14
+        + String [devid]
+      [279] aload_0 v0
+      [280] getfield #48
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.e I]
+      [283] invokeinterface #84
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.putInt (Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;]
+      [288] pop
+      [289] aload v4
+      [291] invokeinterface #83
+        + InterfaceMethodref [android/content/SharedPreferences$Editor.commit ()Z]
+      [296] pop
+      [297] aload_0 v0
+      [298] getfield #46
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.c Landroid/widget/ProgressBar;]
+      [301] bipush 8
+      [303] invokevirtual #57
+        + Methodref [android/widget/ProgressBar.setVisibility (I)V]
+      [306] aload_0 v0
+      [307] ldc #10
+        + String [Device and User Registered]
+      [309] invokespecial #61
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Ljava/lang/String;)V]
+      [312] new #19
+        + Class [android/content/Intent]
+      [315] dup
+      [316] aload_0 v0
+      [317] ldc #32
+        + Class [com/rgap/mylostdevice/ActivityTabs]
+      [319] invokespecial #52
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [322] astore v11
+      [324] aload_0 v0
+      [325] aload v11
+      [327] invokevirtual #68
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.startActivity (Landroid/content/Intent;)V]
+      [330] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 6):
+        - [14] Var: ..., Stack: (empty)
+        - [62] Var: ...[a:java/lang/Thread], Stack: (empty)
+        - [72] Var: ..., Stack: (empty)
+        - [95] Var: ..., Stack: (empty)
+        - [264] Var: [a:com/rgap/mylostdevice/ActivityRegister][a:android/view/View][a:java/lang/Thread][a:android/content/SharedPreferences][a:android/content/SharedPreferences$Editor][a:android/util/DisplayMetrics][a:java/lang/String][a:java/lang/String][a:java/lang/String][a:java/lang/String][a:java/lang/Thread], Stack: 
+        - [275] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void a(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 21, locals = 5, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #63
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.getApplicationContext ()Landroid/content/Context;]
+      [4] astore_2 v2
+      [5] iconst_1
+      [6] istore_3 v3
+      [7] aload_2 v2
+      [8] aload_1 v1
+      [9] iload_3 v3
+      [10] invokestatic #58
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [13] astore v4
+      [15] aload v4
+      [17] invokevirtual #59
+        + Methodref [android/widget/Toast.show ()V]
+      [20] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Lcom/rgap/mylostdevice/ActivityRegister;I)I
+    Access flags: 0x1008
+      = static synthetic int a(com.rgap.mylostdevice.ActivityRegister,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 7, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] dup_x1
+      [3] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.f I]
+      [6] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Lcom/rgap/mylostdevice/ActivityRegister;I)I
+    Access flags: 0x1008
+      = static synthetic int b(com.rgap.mylostdevice.ActivityRegister,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 7, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] dup_x1
+      [3] putfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.d I]
+      [6] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       c(Lcom/rgap/mylostdevice/ActivityRegister;I)I
+    Access flags: 0x1008
+      = static synthetic int c(com.rgap.mylostdevice.ActivityRegister,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 7, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] iload_1 v1
+      [2] dup_x1
+      [3] putfield #48
+        + Fieldref [com/rgap/mylostdevice/ActivityRegister.e I]
+      [6] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/d
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.d extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [java/lang/Runnable]
+
+Constant Pool (count = 134):
+  + String [Exception ]
+  + String [actReg]
+  + String [devlocation]
+  + String [devtype]
+  + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php]
+  + String [resp]
+  + String [userid]
+  + Class [android/util/Log]
+  + Class [com/rgap/mylostdevice/ActivityRegister]
+  + Class [com/rgap/mylostdevice/d]
+  + Class [java/io/ByteArrayOutputStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/Runnable]
+  + Class [java/lang/StringBuilder]
+  + Class [java/util/ArrayList]
+  + Class [java/util/List]
+  + Class [org/apache/http/HttpEntity]
+  + Class [org/apache/http/HttpResponse]
+  + Class [org/apache/http/client/HttpClient]
+  + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Class [org/apache/http/client/methods/HttpPost]
+  + Class [org/apache/http/impl/client/DefaultHttpClient]
+  + Class [org/apache/http/message/BasicNameValuePair]
+  + Class [org/json/JSONObject]
+  + Fieldref [com/rgap/mylostdevice/d.a Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/d.b Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/d.c Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/d.d Lcom/rgap/mylostdevice/ActivityRegister;]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.c (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+  + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+  + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+  + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+  + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+  + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/util/List;)V]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + NameAndType [c Ljava/lang/String;]
+  + NameAndType [d Lcom/rgap/mylostdevice/ActivityRegister;]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [getEntity ()Lorg/apache/http/HttpEntity;]
+  + NameAndType [getString (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [parseInt (Ljava/lang/String;)I]
+  + NameAndType [setEntity (Lorg/apache/http/HttpEntity;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [writeTo (Ljava/io/OutputStream;)V]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Lorg/apache/http/HttpEntity;]
+  + Utf8 [()V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/util/List;)V]
+  + Utf8 [(Lorg/apache/http/HttpEntity;)V]
+  + Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Exception ]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityRegister;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [actReg]
+  + Utf8 [add]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityRegister]
+  + Utf8 [com/rgap/mylostdevice/d]
+  + Utf8 [d]
+  + Utf8 [devlocation]
+  + Utf8 [devtype]
+  + Utf8 [e]
+  + Utf8 [execute]
+  + Utf8 [getEntity]
+  + Utf8 [getString]
+  + Utf8 [http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php]
+  + Utf8 [java/io/ByteArrayOutputStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [java/util/List]
+  + Utf8 [org/apache/http/HttpEntity]
+  + Utf8 [org/apache/http/HttpResponse]
+  + Utf8 [org/apache/http/client/HttpClient]
+  + Utf8 [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Utf8 [org/apache/http/client/methods/HttpPost]
+  + Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  + Utf8 [org/apache/http/message/BasicNameValuePair]
+  + Utf8 [org/json/JSONObject]
+  + Utf8 [parseInt]
+  + Utf8 [resp]
+  + Utf8 [run]
+  + Utf8 [setEntity]
+  + Utf8 [toString]
+  + Utf8 [userid]
+  + Utf8 [writeTo]
+
+Fields (count = 4):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+  + Field:        c Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String c
+  + Field:        d Lcom/rgap/mylostdevice/ActivityRegister;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityRegister d
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x0
+      = d(com.rgap.mylostdevice.ActivityRegister,java.lang.String,java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 26, locals = 5, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #30
+        + Fieldref [com/rgap/mylostdevice/d.d Lcom/rgap/mylostdevice/ActivityRegister;]
+      [5] aload_0 v0
+      [6] invokespecial #37
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] aload_0 v0
+      [10] aload_2 v2
+      [11] putfield #27
+        + Fieldref [com/rgap/mylostdevice/d.a Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] aload_3 v3
+      [16] putfield #29
+        + Fieldref [com/rgap/mylostdevice/d.c Ljava/lang/String;]
+      [19] aload_0 v0
+      [20] aload v4
+      [22] putfield #28
+        + Fieldref [com/rgap/mylostdevice/d.b Ljava/lang/String;]
+      [25] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x1
+      = public void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 199, locals = 8, stack = 5):
+      [0] new #24
+        + Class [org/apache/http/impl/client/DefaultHttpClient]
+      [3] dup
+      [4] invokespecial #45
+        + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [7] astore_1 v1
+      [8] new #23
+        + Class [org/apache/http/client/methods/HttpPost]
+      [11] dup
+      [12] ldc #5
+        + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceInsert.php]
+      [14] invokespecial #43
+        + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+      [17] astore_2 v2
+      [18] new #17
+        + Class [java/util/ArrayList]
+      [21] dup
+      [22] invokespecial #41
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [25] astore_3 v3
+      [26] aload_3 v3
+      [27] new #25
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [30] dup
+      [31] ldc #7
+        + String [userid]
+      [33] aload_0 v0
+      [34] getfield #27
+        + Fieldref [com/rgap/mylostdevice/d.a Ljava/lang/String;]
+      [37] invokespecial #46
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [40] invokeinterface #49
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [45] pop
+      [46] aload_3 v3
+      [47] new #25
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [50] dup
+      [51] ldc #4
+        + String [devtype]
+      [53] aload_0 v0
+      [54] getfield #29
+        + Fieldref [com/rgap/mylostdevice/d.c Ljava/lang/String;]
+      [57] invokespecial #46
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [60] invokeinterface #49
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [65] pop
+      [66] aload_3 v3
+      [67] new #25
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [70] dup
+      [71] ldc #3
+        + String [devlocation]
+      [73] aload_0 v0
+      [74] getfield #28
+        + Fieldref [com/rgap/mylostdevice/d.b Ljava/lang/String;]
+      [77] invokespecial #46
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [80] invokeinterface #49
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [85] pop
+      [86] aload_2 v2
+      [87] new #22
+        + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+      [90] dup
+      [91] aload_3 v3
+      [92] invokespecial #42
+        + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+      [95] invokevirtual #44
+        + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+      [98] aload_1 v1
+      [99] aload_2 v2
+      [100] invokeinterface #52
+        + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [105] astore v4
+      [107] new #11
+        + Class [java/io/ByteArrayOutputStream]
+      [110] dup
+      [111] invokespecial #33
+        + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+      [114] astore v5
+      [116] aload v4
+      [118] invokeinterface #51
+        + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+      [123] aload v5
+      [125] invokeinterface #50
+        + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+      [130] aload v5
+      [132] invokevirtual #34
+        + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+      [135] astore v6
+      [137] new #26
+        + Class [org/json/JSONObject]
+      [140] dup
+      [141] aload v6
+      [143] invokespecial #47
+        + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+      [146] astore v7
+      [148] aload_0 v0
+      [149] getfield #30
+        + Fieldref [com/rgap/mylostdevice/d.d Lcom/rgap/mylostdevice/ActivityRegister;]
+      [152] aload v7
+      [154] ldc #6
+        + String [resp]
+      [156] invokevirtual #48
+        + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [159] invokestatic #36
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [162] invokestatic #32
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.c (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+      [165] pop
+      [166] goto +32 (target=198)
+      [169] astore_3 v3
+      [170] ldc #2
+        + String [actReg]
+      [172] new #16
+        + Class [java/lang/StringBuilder]
+      [175] dup
+      [176] invokespecial #38
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [179] ldc #1
+        + String [Exception ]
+      [181] invokevirtual #39
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [184] aload_3 v3
+      [185] invokevirtual #35
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [188] invokevirtual #39
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [191] invokevirtual #40
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [194] invokestatic #31
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [197] pop
+      [198] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (18 -> 166: 169):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [169] Var: [a:com/rgap/mylostdevice/d][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost], Stack: [a:java/lang/Exception]
+        - [198] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/e
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.e extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [java/lang/Runnable]
+
+Constant Pool (count = 138):
+  + String [0]
+  + String [Exception ]
+  + String [addReg]
+  + String [http://relguzman.com/MyLostDevice/controller_client/corUserInsert.php]
+  + String [password]
+  + String [resp]
+  + String [username]
+  + Class [android/util/Log]
+  + Class [com/rgap/mylostdevice/ActivityRegister]
+  + Class [com/rgap/mylostdevice/e]
+  + Class [java/io/ByteArrayOutputStream]
+  + Class [java/lang/Exception]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/Runnable]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/util/ArrayList]
+  + Class [java/util/List]
+  + Class [org/apache/http/HttpEntity]
+  + Class [org/apache/http/HttpResponse]
+  + Class [org/apache/http/client/HttpClient]
+  + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Class [org/apache/http/client/methods/HttpPost]
+  + Class [org/apache/http/impl/client/DefaultHttpClient]
+  + Class [org/apache/http/message/BasicNameValuePair]
+  + Class [org/json/JSONObject]
+  + Fieldref [com/rgap/mylostdevice/e.a Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/e.b Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/e.c Lcom/rgap/mylostdevice/ActivityRegister;]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + Methodref [com/rgap/mylostdevice/ActivityRegister.b (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+  + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+  + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+  + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+  + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+  + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+  + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/util/List;)V]
+  + NameAndType [a (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c Lcom/rgap/mylostdevice/ActivityRegister;]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [equals (Ljava/lang/Object;)Z]
+  + NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [getEntity ()Lorg/apache/http/HttpEntity;]
+  + NameAndType [getString (Ljava/lang/String;)Ljava/lang/String;]
+  + NameAndType [parseInt (Ljava/lang/String;)I]
+  + NameAndType [setEntity (Lorg/apache/http/HttpEntity;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [writeTo (Ljava/io/OutputStream;)V]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Lorg/apache/http/HttpEntity;]
+  + Utf8 [()V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/io/OutputStream;)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/util/List;)V]
+  + Utf8 [(Lorg/apache/http/HttpEntity;)V]
+  + Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + Utf8 [0]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Exception ]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityRegister;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [addReg]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityRegister]
+  + Utf8 [com/rgap/mylostdevice/e]
+  + Utf8 [e]
+  + Utf8 [equals]
+  + Utf8 [execute]
+  + Utf8 [getEntity]
+  + Utf8 [getString]
+  + Utf8 [http://relguzman.com/MyLostDevice/controller_client/corUserInsert.php]
+  + Utf8 [java/io/ByteArrayOutputStream]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/Runnable]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [java/util/List]
+  + Utf8 [org/apache/http/HttpEntity]
+  + Utf8 [org/apache/http/HttpResponse]
+  + Utf8 [org/apache/http/client/HttpClient]
+  + Utf8 [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Utf8 [org/apache/http/client/methods/HttpPost]
+  + Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  + Utf8 [org/apache/http/message/BasicNameValuePair]
+  + Utf8 [org/json/JSONObject]
+  + Utf8 [parseInt]
+  + Utf8 [password]
+  + Utf8 [resp]
+  + Utf8 [run]
+  + Utf8 [setEntity]
+  + Utf8 [toString]
+  + Utf8 [username]
+  + Utf8 [writeTo]
+
+Fields (count = 3):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+  + Field:        c Lcom/rgap/mylostdevice/ActivityRegister;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityRegister c
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityRegister;Ljava/lang/String;Ljava/lang/String;)V
+    Access flags: 0x0
+      = e(com.rgap.mylostdevice.ActivityRegister,java.lang.String,java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 4, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #30
+        + Fieldref [com/rgap/mylostdevice/e.c Lcom/rgap/mylostdevice/ActivityRegister;]
+      [5] aload_0 v0
+      [6] invokespecial #38
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] aload_0 v0
+      [10] aload_2 v2
+      [11] putfield #28
+        + Fieldref [com/rgap/mylostdevice/e.a Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] aload_3 v3
+      [16] putfield #29
+        + Fieldref [com/rgap/mylostdevice/e.b Ljava/lang/String;]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x1
+      = public void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 215, locals = 8, stack = 5):
+      [0] new #25
+        + Class [org/apache/http/impl/client/DefaultHttpClient]
+      [3] dup
+      [4] invokespecial #47
+        + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [7] astore_1 v1
+      [8] new #24
+        + Class [org/apache/http/client/methods/HttpPost]
+      [11] dup
+      [12] ldc #4
+        + String [http://relguzman.com/MyLostDevice/controller_client/corUserInsert.php]
+      [14] invokespecial #45
+        + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+      [17] astore_2 v2
+      [18] new #18
+        + Class [java/util/ArrayList]
+      [21] dup
+      [22] invokespecial #43
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [25] astore_3 v3
+      [26] aload_3 v3
+      [27] new #26
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [30] dup
+      [31] ldc #7
+        + String [username]
+      [33] aload_0 v0
+      [34] getfield #28
+        + Fieldref [com/rgap/mylostdevice/e.a Ljava/lang/String;]
+      [37] invokespecial #48
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [40] invokeinterface #51
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [45] pop
+      [46] aload_3 v3
+      [47] new #26
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [50] dup
+      [51] ldc #5
+        + String [password]
+      [53] aload_0 v0
+      [54] getfield #29
+        + Fieldref [com/rgap/mylostdevice/e.b Ljava/lang/String;]
+      [57] invokespecial #48
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [60] invokeinterface #51
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [65] pop
+      [66] aload_2 v2
+      [67] new #23
+        + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+      [70] dup
+      [71] aload_3 v3
+      [72] invokespecial #44
+        + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+      [75] invokevirtual #46
+        + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+      [78] aload_1 v1
+      [79] aload_2 v2
+      [80] invokeinterface #54
+        + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [85] astore v4
+      [87] new #11
+        + Class [java/io/ByteArrayOutputStream]
+      [90] dup
+      [91] invokespecial #34
+        + Methodref [java/io/ByteArrayOutputStream.<init> ()V]
+      [94] astore v5
+      [96] aload v4
+      [98] invokeinterface #53
+        + InterfaceMethodref [org/apache/http/HttpResponse.getEntity ()Lorg/apache/http/HttpEntity;]
+      [103] aload v5
+      [105] invokeinterface #52
+        + InterfaceMethodref [org/apache/http/HttpEntity.writeTo (Ljava/io/OutputStream;)V]
+      [110] aload v5
+      [112] invokevirtual #35
+        + Methodref [java/io/ByteArrayOutputStream.toString ()Ljava/lang/String;]
+      [115] astore v6
+      [117] new #27
+        + Class [org/json/JSONObject]
+      [120] dup
+      [121] aload v6
+      [123] invokespecial #49
+        + Methodref [org/json/JSONObject.<init> (Ljava/lang/String;)V]
+      [126] astore v7
+      [128] aload v7
+      [130] ldc #6
+        + String [resp]
+      [132] invokevirtual #50
+        + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [135] ldc #1
+        + String [0]
+      [137] invokevirtual #39
+        + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
+      [140] ifeq +15 (target=155)
+      [143] aload_0 v0
+      [144] getfield #30
+        + Fieldref [com/rgap/mylostdevice/e.c Lcom/rgap/mylostdevice/ActivityRegister;]
+      [147] iconst_0
+      [148] invokestatic #32
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+      [151] pop
+      [152] goto +30 (target=182)
+      [155] aload_0 v0
+      [156] getfield #30
+        + Fieldref [com/rgap/mylostdevice/e.c Lcom/rgap/mylostdevice/ActivityRegister;]
+      [159] aload v7
+      [161] ldc #6
+        + String [resp]
+      [163] invokevirtual #50
+        + Methodref [org/json/JSONObject.getString (Ljava/lang/String;)Ljava/lang/String;]
+      [166] invokestatic #37
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [169] invokestatic #33
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.b (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+      [172] pop
+      [173] aload_0 v0
+      [174] getfield #30
+        + Fieldref [com/rgap/mylostdevice/e.c Lcom/rgap/mylostdevice/ActivityRegister;]
+      [177] iconst_1
+      [178] invokestatic #32
+        + Methodref [com/rgap/mylostdevice/ActivityRegister.a (Lcom/rgap/mylostdevice/ActivityRegister;I)I]
+      [181] pop
+      [182] goto +32 (target=214)
+      [185] astore_3 v3
+      [186] ldc #3
+        + String [addReg]
+      [188] new #17
+        + Class [java/lang/StringBuilder]
+      [191] dup
+      [192] invokespecial #40
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [195] ldc #2
+        + String [Exception ]
+      [197] invokevirtual #41
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [200] aload_3 v3
+      [201] invokevirtual #36
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [204] invokevirtual #41
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [207] invokevirtual #42
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [210] invokestatic #31
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [213] pop
+      [214] return
+      Code attribute exceptions (count = 1):
+      - ExceptionInfo (18 -> 182: 185):
+      + Class [java/lang/Exception]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [155] Var: [a:com/rgap/mylostdevice/e][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost][a:java/util/List][a:org/apache/http/HttpResponse][a:java/io/ByteArrayOutputStream][a:java/lang/String][a:org/json/JSONObject], Stack: 
+        - [182] Var: [a:com/rgap/mylostdevice/e][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost], Stack: 
+        - [185] Var: ..., Stack: [a:java/lang/Exception]
+        - [214] Var: ..., Stack: (empty)
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/ActivityTabs
+  Superclass:    android/app/Activity
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x21
+    = public class com.rgap.mylostdevice.ActivityTabs extends android.app.Activity
+
+Interfaces (count = 1):
+  + Class [android/location/LocationListener]
+
+Constant Pool (count = 307):
+  + Integer [16908306]
+  + Integer [17039370]
+  + Integer [2130903041]
+  + Integer [2130903043]
+  + Integer [2131034133]
+  + Integer [2131230720]
+  + String [ has been selected.]
+  + String [0]
+  + String [1]
+  + String [2]
+  + String [About This]
+  + String [Configuration]
+  + String [Device disabled]
+  + String [Device enabled]
+  + String [Device unlinked]
+  + String [Disabled provider ]
+  + String [Enabled new provider ]
+  + String [Location not available]
+  + String [PrefFile]
+  + String [Provider ]
+  + String [devid]
+  + String [location]
+  + String [tag2]
+  + String [userid]
+  + Class [android/app/Activity]
+  + Class [android/app/AlertDialog]
+  + Class [android/app/AlertDialog$Builder]
+  + Class [android/content/Intent]
+  + Class [android/content/SharedPreferences]
+  + Class [android/location/Criteria]
+  + Class [android/location/Location]
+  + Class [android/location/LocationListener]
+  + Class [android/location/LocationManager]
+  + Class [android/view/MenuInflater]
+  + Class [android/view/MenuItem]
+  + Class [android/widget/TabHost]
+  + Class [android/widget/TabHost$TabSpec]
+  + Class [android/widget/Toast]
+  + Class [android/widget/ToggleButton]
+  + Class [com/rgap/mylostdevice/ActivityLogin]
+  + Class [com/rgap/mylostdevice/ActivityTabs]
+  + Class [com/rgap/mylostdevice/f]
+  + Class [com/rgap/mylostdevice/g]
+  + Class [java/lang/StringBuilder]
+  + Long [400]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.a I]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.b I]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.e Landroid/widget/TabHost;]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.g Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.h D]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.i D]
+  + Methodref [android/app/Activity.<init> ()V]
+  + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/app/Activity.onOptionsItemSelected (Landroid/view/MenuItem;)Z]
+  + Methodref [android/app/Activity.onPause ()V]
+  + Methodref [android/app/Activity.onResume ()V]
+  + Methodref [android/app/AlertDialog.show ()V]
+  + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+  + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
+  + Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/app/AlertDialog$Builder.setNeutralButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + Methodref [android/location/Criteria.<init> ()V]
+  + Methodref [android/location/Location.getLatitude ()D]
+  + Methodref [android/location/Location.getLongitude ()D]
+  + Methodref [android/location/LocationManager.getBestProvider (Landroid/location/Criteria;Z)Ljava/lang/String;]
+  + Methodref [android/location/LocationManager.getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
+  + Methodref [android/location/LocationManager.removeUpdates (Landroid/location/LocationListener;)V]
+  + Methodref [android/location/LocationManager.requestLocationUpdates (Ljava/lang/String;JFLandroid/location/LocationListener;)V]
+  + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+  + Methodref [android/widget/TabHost.addTab (Landroid/widget/TabHost$TabSpec;)V]
+  + Methodref [android/widget/TabHost.newTabSpec (Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;]
+  + Methodref [android/widget/TabHost.setup ()V]
+  + Methodref [android/widget/TabHost$TabSpec.setContent (I)Landroid/widget/TabHost$TabSpec;]
+  + Methodref [android/widget/TabHost$TabSpec.setIndicator (Ljava/lang/CharSequence;)Landroid/widget/TabHost$TabSpec;]
+  + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Methodref [android/widget/Toast.show ()V]
+  + Methodref [android/widget/ToggleButton.isChecked ()Z]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.a ()V]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.a (Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Ljava/lang/String;)V]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.findViewById (I)Landroid/view/View;]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.getApplicationContext ()Landroid/content/Context;]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.getMenuInflater ()Landroid/view/MenuInflater;]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.getString (I)Ljava/lang/String;]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.onLocationChanged (Landroid/location/Location;)V]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.setContentView (I)V]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.startActivity (Landroid/content/Intent;)V]
+  + Methodref [com/rgap/mylostdevice/f.<init> (Lcom/rgap/mylostdevice/ActivityTabs;)V]
+  + Methodref [com/rgap/mylostdevice/g.<init> (Lcom/rgap/mylostdevice/ActivityTabs;)V]
+  + Methodref [com/rgap/mylostdevice/g.<init> (Lcom/rgap/mylostdevice/ActivityTabs;Z)V]
+  + Methodref [com/rgap/mylostdevice/g.b ()V]
+  + Methodref [com/rgap/mylostdevice/g.start ()V]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+  + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Landroid/content/Context;)V]
+  + NameAndType [<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+  + NameAndType [<init> (Lcom/rgap/mylostdevice/ActivityTabs;)V]
+  + NameAndType [<init> (Lcom/rgap/mylostdevice/ActivityTabs;Z)V]
+  + NameAndType [a ()V]
+  + NameAndType [a (Ljava/lang/String;)V]
+  + NameAndType [a I]
+  + NameAndType [addTab (Landroid/widget/TabHost$TabSpec;)V]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b ()V]
+  + NameAndType [b (Ljava/lang/String;)V]
+  + NameAndType [b I]
+  + NameAndType [c Ljava/lang/String;]
+  + NameAndType [create ()Landroid/app/AlertDialog;]
+  + NameAndType [d Lcom/rgap/mylostdevice/g;]
+  + NameAndType [e Landroid/widget/TabHost;]
+  + NameAndType [f Landroid/location/LocationManager;]
+  + NameAndType [findViewById (I)Landroid/view/View;]
+  + NameAndType [g Ljava/lang/String;]
+  + NameAndType [getApplicationContext ()Landroid/content/Context;]
+  + NameAndType [getBestProvider (Landroid/location/Criteria;Z)Ljava/lang/String;]
+  + NameAndType [getInt (Ljava/lang/String;I)I]
+  + NameAndType [getItemId ()I]
+  + NameAndType [getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
+  + NameAndType [getLatitude ()D]
+  + NameAndType [getLongitude ()D]
+  + NameAndType [getMenuInflater ()Landroid/view/MenuInflater;]
+  + NameAndType [getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + NameAndType [getString (I)Ljava/lang/String;]
+  + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+  + NameAndType [h D]
+  + NameAndType [i D]
+  + NameAndType [inflate (ILandroid/view/Menu;)V]
+  + NameAndType [isChecked ()Z]
+  + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + NameAndType [newTabSpec (Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onLocationChanged (Landroid/location/Location;)V]
+  + NameAndType [onOptionsItemSelected (Landroid/view/MenuItem;)Z]
+  + NameAndType [onPause ()V]
+  + NameAndType [onResume ()V]
+  + NameAndType [removeUpdates (Landroid/location/LocationListener;)V]
+  + NameAndType [requestLocationUpdates (Ljava/lang/String;JFLandroid/location/LocationListener;)V]
+  + NameAndType [setCancelable (Z)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [setContent (I)Landroid/widget/TabHost$TabSpec;]
+  + NameAndType [setContentView (I)V]
+  + NameAndType [setIndicator (Ljava/lang/CharSequence;)Landroid/widget/TabHost$TabSpec;]
+  + NameAndType [setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [setNeutralButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + NameAndType [setup ()V]
+  + NameAndType [show ()V]
+  + NameAndType [start ()V]
+  + NameAndType [startActivity (Landroid/content/Intent;)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + Utf8 [ has been selected.]
+  + Utf8 [()D]
+  + Utf8 [()I]
+  + Utf8 [()Landroid/app/AlertDialog;]
+  + Utf8 [()Landroid/content/Context;]
+  + Utf8 [()Landroid/view/MenuInflater;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [()Z]
+  + Utf8 [(I)Landroid/view/View;]
+  + Utf8 [(I)Landroid/widget/TabHost$TabSpec;]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(I)V]
+  + Utf8 [(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+  + Utf8 [(ILandroid/view/Menu;)V]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+  + Utf8 [(Landroid/content/Context;Ljava/lang/Class;)V]
+  + Utf8 [(Landroid/content/Intent;)V]
+  + Utf8 [(Landroid/location/Criteria;Z)Ljava/lang/String;]
+  + Utf8 [(Landroid/location/Location;)V]
+  + Utf8 [(Landroid/location/LocationListener;)V]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [(Landroid/view/Menu;)Z]
+  + Utf8 [(Landroid/view/MenuItem;)Z]
+  + Utf8 [(Landroid/view/View;)V]
+  + Utf8 [(Landroid/widget/TabHost$TabSpec;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;)D]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;Z)V]
+  + Utf8 [(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+  + Utf8 [(Ljava/lang/CharSequence;)Landroid/widget/TabHost$TabSpec;]
+  + Utf8 [(Ljava/lang/String;)Landroid/location/Location;]
+  + Utf8 [(Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;I)I]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+  + Utf8 [(Ljava/lang/String;ILandroid/os/Bundle;)V]
+  + Utf8 [(Ljava/lang/String;JFLandroid/location/LocationListener;)V]
+  + Utf8 [(Z)Landroid/app/AlertDialog$Builder;]
+  + Utf8 [0]
+  + Utf8 [1]
+  + Utf8 [2]
+  + Utf8 [<init>]
+  + Utf8 [About This]
+  + Utf8 [Code]
+  + Utf8 [Configuration]
+  + Utf8 [D]
+  + Utf8 [Device disabled]
+  + Utf8 [Device enabled]
+  + Utf8 [Device unlinked]
+  + Utf8 [Disabled provider ]
+  + Utf8 [Enabled new provider ]
+  + Utf8 [I]
+  + Utf8 [Landroid/location/LocationManager;]
+  + Utf8 [Landroid/widget/TabHost;]
+  + Utf8 [Lcom/rgap/mylostdevice/g;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [Location not available]
+  + Utf8 [PrefFile]
+  + Utf8 [Provider ]
+  + Utf8 [StackMapTable]
+  + Utf8 [a]
+  + Utf8 [actionChangeState]
+  + Utf8 [actionUnlink]
+  + Utf8 [addTab]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/app/AlertDialog]
+  + Utf8 [android/app/AlertDialog$Builder]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/content/SharedPreferences]
+  + Utf8 [android/location/Criteria]
+  + Utf8 [android/location/Location]
+  + Utf8 [android/location/LocationListener]
+  + Utf8 [android/location/LocationManager]
+  + Utf8 [android/view/MenuInflater]
+  + Utf8 [android/view/MenuItem]
+  + Utf8 [android/widget/TabHost]
+  + Utf8 [android/widget/TabHost$TabSpec]
+  + Utf8 [android/widget/Toast]
+  + Utf8 [android/widget/ToggleButton]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityLogin]
+  + Utf8 [com/rgap/mylostdevice/ActivityTabs]
+  + Utf8 [com/rgap/mylostdevice/f]
+  + Utf8 [com/rgap/mylostdevice/g]
+  + Utf8 [create]
+  + Utf8 [d]
+  + Utf8 [devid]
+  + Utf8 [e]
+  + Utf8 [f]
+  + Utf8 [findViewById]
+  + Utf8 [g]
+  + Utf8 [getApplicationContext]
+  + Utf8 [getBestProvider]
+  + Utf8 [getInt]
+  + Utf8 [getItemId]
+  + Utf8 [getLastKnownLocation]
+  + Utf8 [getLatitude]
+  + Utf8 [getLongitude]
+  + Utf8 [getMenuInflater]
+  + Utf8 [getSharedPreferences]
+  + Utf8 [getString]
+  + Utf8 [getSystemService]
+  + Utf8 [h]
+  + Utf8 [i]
+  + Utf8 [inflate]
+  + Utf8 [isChecked]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [location]
+  + Utf8 [makeText]
+  + Utf8 [newTabSpec]
+  + Utf8 [onBackPressed]
+  + Utf8 [onCreate]
+  + Utf8 [onCreateOptionsMenu]
+  + Utf8 [onDestroy]
+  + Utf8 [onLocationChanged]
+  + Utf8 [onOptionsItemSelected]
+  + Utf8 [onPause]
+  + Utf8 [onProviderDisabled]
+  + Utf8 [onProviderEnabled]
+  + Utf8 [onResume]
+  + Utf8 [onStatusChanged]
+  + Utf8 [onStop]
+  + Utf8 [removeUpdates]
+  + Utf8 [requestLocationUpdates]
+  + Utf8 [setCancelable]
+  + Utf8 [setContent]
+  + Utf8 [setContentView]
+  + Utf8 [setIndicator]
+  + Utf8 [setMessage]
+  + Utf8 [setNeutralButton]
+  + Utf8 [setTitle]
+  + Utf8 [setup]
+  + Utf8 [show]
+  + Utf8 [start]
+  + Utf8 [startActivity]
+  + Utf8 [tag2]
+  + Utf8 [toString]
+  + Utf8 [userid]
+
+Fields (count = 9):
+  + Field:        e Landroid/widget/TabHost;
+    Access flags: 0x2
+      = private android.widget.TabHost e
+  + Field:        f Landroid/location/LocationManager;
+    Access flags: 0x2
+      = private android.location.LocationManager f
+  + Field:        g Ljava/lang/String;
+    Access flags: 0x2
+      = private java.lang.String g
+  + Field:        a I
+    Access flags: 0x0
+      = int a
+  + Field:        b I
+    Access flags: 0x0
+      = int b
+  + Field:        c Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String c
+  + Field:        h D
+    Access flags: 0x2
+      = private double h
+  + Field:        i D
+    Access flags: 0x2
+      = private double i
+  + Field:        d Lcom/rgap/mylostdevice/g;
+    Access flags: 0x41
+      = public volatile com.rgap.mylostdevice.g d
+
+Methods (count = 20):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public ActivityTabs()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #56
+        + Methodref [android/app/Activity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 205, locals = 6, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #57
+        + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] ldc #3
+        + Integer [2130903041]
+      [8] invokevirtual #95
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.setContentView (I)V]
+      [11] aload_0 v0
+      [12] aload_0 v0
+      [13] ldc #1
+        + Integer [16908306]
+      [15] invokevirtual #88
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.findViewById (I)Landroid/view/View;]
+      [18] checkcast #36
+        + Class [android/widget/TabHost]
+      [21] putfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.e Landroid/widget/TabHost;]
+      [24] aload_0 v0
+      [25] getfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.e Landroid/widget/TabHost;]
+      [28] invokevirtual #79
+        + Methodref [android/widget/TabHost.setup ()V]
+      [31] aload_0 v0
+      [32] getfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.e Landroid/widget/TabHost;]
+      [35] ldc #23
+        + String [tag2]
+      [37] invokevirtual #78
+        + Methodref [android/widget/TabHost.newTabSpec (Ljava/lang/String;)Landroid/widget/TabHost$TabSpec;]
+      [40] astore_2 v2
+      [41] aload_2 v2
+      [42] ldc #12
+        + String [Configuration]
+      [44] invokevirtual #81
+        + Methodref [android/widget/TabHost$TabSpec.setIndicator (Ljava/lang/CharSequence;)Landroid/widget/TabHost$TabSpec;]
+      [47] pop
+      [48] aload_2 v2
+      [49] ldc #4
+        + Integer [2130903043]
+      [51] invokevirtual #80
+        + Methodref [android/widget/TabHost$TabSpec.setContent (I)Landroid/widget/TabHost$TabSpec;]
+      [54] pop
+      [55] aload_0 v0
+      [56] getfield #51
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.e Landroid/widget/TabHost;]
+      [59] aload_2 v2
+      [60] invokevirtual #77
+        + Methodref [android/widget/TabHost.addTab (Landroid/widget/TabHost$TabSpec;)V]
+      [63] aload_0 v0
+      [64] aload_0 v0
+      [65] ldc #22
+        + String [location]
+      [67] invokevirtual #93
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
+      [70] checkcast #33
+        + Class [android/location/LocationManager]
+      [73] putfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [76] new #30
+        + Class [android/location/Criteria]
+      [79] dup
+      [80] invokespecial #69
+        + Methodref [android/location/Criteria.<init> ()V]
+      [83] astore_3 v3
+      [84] aload_0 v0
+      [85] aload_0 v0
+      [86] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [89] aload_3 v3
+      [90] iconst_0
+      [91] invokevirtual #72
+        + Methodref [android/location/LocationManager.getBestProvider (Landroid/location/Criteria;Z)Ljava/lang/String;]
+      [94] putfield #53
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.g Ljava/lang/String;]
+      [97] aload_0 v0
+      [98] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [101] aload_0 v0
+      [102] getfield #53
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.g Ljava/lang/String;]
+      [105] invokevirtual #73
+        + Methodref [android/location/LocationManager.getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
+      [108] astore v4
+      [110] aload v4
+      [112] ifnull +43 (target=155)
+      [115] aload_0 v0
+      [116] new #44
+        + Class [java/lang/StringBuilder]
+      [119] dup
+      [120] invokespecial #102
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [123] ldc #20
+        + String [Provider ]
+      [125] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [128] aload_0 v0
+      [129] getfield #53
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.g Ljava/lang/String;]
+      [132] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [135] ldc #7
+        + String [ has been selected.]
+      [137] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [140] invokevirtual #104
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [143] invokespecial #87
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Ljava/lang/String;)V]
+      [146] aload_0 v0
+      [147] aload v4
+      [149] invokevirtual #94
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.onLocationChanged (Landroid/location/Location;)V]
+      [152] goto +9 (target=161)
+      [155] aload_0 v0
+      [156] ldc #18
+        + String [Location not available]
+      [158] invokespecial #87
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Ljava/lang/String;)V]
+      [161] aload_0 v0
+      [162] ldc #8
+        + String [0]
+      [164] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [167] aload_0 v0
+      [168] ldc #19
+        + String [PrefFile]
+      [170] iconst_0
+      [171] invokevirtual #91
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
+      [174] astore v5
+      [176] aload_0 v0
+      [177] aload v5
+      [179] ldc #24
+        + String [userid]
+      [181] iconst_0
+      [182] invokeinterface #105
+        + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+      [187] putfield #47
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.a I]
+      [190] aload_0 v0
+      [191] aload v5
+      [193] ldc #21
+        + String [devid]
+      [195] iconst_0
+      [196] invokeinterface #105
+        + InterfaceMethodref [android/content/SharedPreferences.getInt (Ljava/lang/String;I)I]
+      [201] putfield #48
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.b I]
+      [204] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [155] Var: ...[a:android/widget/TabHost$TabSpec][a:android/location/Criteria][a:android/location/Location], Stack: (empty)
+        - [161] Var: ..., Stack: (empty)
+  + Method:       onBackPressed()V
+    Access flags: 0x1
+      = public void onBackPressed()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 1, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()V
+    Access flags: 0x1
+      = public void a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 27, locals = 1, stack = 5):
+      [0] aload_0 v0
+      [1] ldc #10
+        + String [2]
+      [3] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [6] aload_0 v0
+      [7] new #43
+        + Class [com/rgap/mylostdevice/g]
+      [10] dup
+      [11] aload_0 v0
+      [12] iconst_1
+      [13] invokespecial #99
+        + Methodref [com/rgap/mylostdevice/g.<init> (Lcom/rgap/mylostdevice/ActivityTabs;Z)V]
+      [16] putfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [19] aload_0 v0
+      [20] getfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [23] invokevirtual #101
+        + Methodref [com/rgap/mylostdevice/g.start ()V]
+      [26] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onStop()V
+    Access flags: 0x4
+      = protected void onStop()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 13, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #59
+        + Methodref [android/app/Activity.onPause ()V]
+      [4] aload_0 v0
+      [5] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [8] aload_0 v0
+      [9] invokevirtual #74
+        + Methodref [android/location/LocationManager.removeUpdates (Landroid/location/LocationListener;)V]
+      [12] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onDestroy()V
+    Access flags: 0x4
+      = protected void onDestroy()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 17, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokevirtual #85
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.a ()V]
+      [4] aload_0 v0
+      [5] invokespecial #59
+        + Methodref [android/app/Activity.onPause ()V]
+      [8] aload_0 v0
+      [9] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [12] aload_0 v0
+      [13] invokevirtual #74
+        + Methodref [android/location/LocationManager.removeUpdates (Landroid/location/LocationListener;)V]
+      [16] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onPause()V
+    Access flags: 0x4
+      = protected void onPause()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 13, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #59
+        + Methodref [android/app/Activity.onPause ()V]
+      [4] aload_0 v0
+      [5] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [8] aload_0 v0
+      [9] invokevirtual #74
+        + Methodref [android/location/LocationManager.removeUpdates (Landroid/location/LocationListener;)V]
+      [12] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Ljava/lang/String;)V
+    Access flags: 0x2
+      = private void b(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 21, locals = 5, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #89
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.getApplicationContext ()Landroid/content/Context;]
+      [4] astore_2 v2
+      [5] iconst_1
+      [6] istore_3 v3
+      [7] aload_2 v2
+      [8] aload_1 v1
+      [9] iload_3 v3
+      [10] invokestatic #82
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [13] astore v4
+      [15] aload v4
+      [17] invokevirtual #83
+        + Methodref [android/widget/Toast.show ()V]
+      [20] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onResume()V
+    Access flags: 0x4
+      = protected void onResume()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 21, locals = 1, stack = 6):
+      [0] aload_0 v0
+      [1] invokespecial #60
+        + Methodref [android/app/Activity.onResume ()V]
+      [4] aload_0 v0
+      [5] getfield #52
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.f Landroid/location/LocationManager;]
+      [8] aload_0 v0
+      [9] getfield #53
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.g Ljava/lang/String;]
+      [12] ldc2_w #45
+        + Long [400]
+      [15] fconst_1
+      [16] aload_0 v0
+      [17] invokevirtual #75
+        + Methodref [android/location/LocationManager.requestLocationUpdates (Ljava/lang/String;JFLandroid/location/LocationListener;)V]
+      [20] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onLocationChanged(Landroid/location/Location;)V
+    Access flags: 0x1
+      = public void onLocationChanged(android.location.Location)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 17, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokevirtual #70
+        + Methodref [android/location/Location.getLatitude ()D]
+      [5] putfield #54
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.h D]
+      [8] aload_0 v0
+      [9] aload_1 v1
+      [10] invokevirtual #71
+        + Methodref [android/location/Location.getLongitude ()D]
+      [13] putfield #55
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.i D]
+      [16] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
+    Access flags: 0x1
+      = public void onStatusChanged(java.lang.String,int,android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 1, locals = 4, stack = 0):
+      [0] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onProviderEnabled(Ljava/lang/String;)V
+    Access flags: 0x1
+      = public void onProviderEnabled(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] new #44
+        + Class [java/lang/StringBuilder]
+      [4] dup
+      [5] invokespecial #102
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [8] ldc #17
+        + String [Enabled new provider ]
+      [10] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [13] aload_1 v1
+      [14] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [17] invokevirtual #104
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [20] iconst_0
+      [21] invokestatic #82
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [24] invokevirtual #83
+        + Methodref [android/widget/Toast.show ()V]
+      [27] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onProviderDisabled(Ljava/lang/String;)V
+    Access flags: 0x1
+      = public void onProviderDisabled(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] new #44
+        + Class [java/lang/StringBuilder]
+      [4] dup
+      [5] invokespecial #102
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [8] ldc #16
+        + String [Disabled provider ]
+      [10] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [13] aload_1 v1
+      [14] invokevirtual #103
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [17] invokevirtual #104
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [20] iconst_0
+      [21] invokestatic #82
+        + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
+      [24] invokevirtual #83
+        + Methodref [android/widget/Toast.show ()V]
+      [27] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onCreateOptionsMenu(Landroid/view/Menu;)Z
+    Access flags: 0x1
+      = public boolean onCreateOptionsMenu(android.view.Menu)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 12, locals = 2, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #90
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.getMenuInflater ()Landroid/view/MenuInflater;]
+      [4] ldc #6
+        + Integer [2131230720]
+      [6] aload_1 v1
+      [7] invokevirtual #76
+        + Methodref [android/view/MenuInflater.inflate (ILandroid/view/Menu;)V]
+      [10] iconst_1
+      [11] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       actionChangeState(Landroid/view/View;)V
+    Access flags: 0x21
+      = public synchronized void actionChangeState(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 86, locals = 3, stack = 5):
+      [0] aload_1 v1
+      [1] checkcast #39
+        + Class [android/widget/ToggleButton]
+      [4] invokevirtual #84
+        + Methodref [android/widget/ToggleButton.isChecked ()Z]
+      [7] istore_2 v2
+      [8] iload_2 v2
+      [9] ifeq +37 (target=46)
+      [12] aload_0 v0
+      [13] ldc #9
+        + String [1]
+      [15] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [18] aload_0 v0
+      [19] new #43
+        + Class [com/rgap/mylostdevice/g]
+      [22] dup
+      [23] aload_0 v0
+      [24] invokespecial #98
+        + Methodref [com/rgap/mylostdevice/g.<init> (Lcom/rgap/mylostdevice/ActivityTabs;)V]
+      [27] putfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [30] aload_0 v0
+      [31] getfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [34] invokevirtual #101
+        + Methodref [com/rgap/mylostdevice/g.start ()V]
+      [37] aload_0 v0
+      [38] ldc #14
+        + String [Device enabled]
+      [40] invokespecial #87
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Ljava/lang/String;)V]
+      [43] goto +42 (target=85)
+      [46] aload_0 v0
+      [47] ldc #8
+        + String [0]
+      [49] putfield #49
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [52] aload_0 v0
+      [53] getfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [56] invokevirtual #100
+        + Methodref [com/rgap/mylostdevice/g.b ()V]
+      [59] aload_0 v0
+      [60] new #43
+        + Class [com/rgap/mylostdevice/g]
+      [63] dup
+      [64] aload_0 v0
+      [65] iconst_1
+      [66] invokespecial #99
+        + Methodref [com/rgap/mylostdevice/g.<init> (Lcom/rgap/mylostdevice/ActivityTabs;Z)V]
+      [69] putfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [72] aload_0 v0
+      [73] getfield #50
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.d Lcom/rgap/mylostdevice/g;]
+      [76] invokevirtual #101
+        + Methodref [com/rgap/mylostdevice/g.start ()V]
+      [79] aload_0 v0
+      [80] ldc #13
+        + String [Device disabled]
+      [82] invokespecial #87
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Ljava/lang/String;)V]
+      [85] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [46] Var: ...[i], Stack: (empty)
+        - [85] Var: ..., Stack: (empty)
+  + Method:       actionUnlink(Landroid/view/View;)V
+    Access flags: 0x1
+      = public void actionUnlink(android.view.View)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 27, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] invokevirtual #85
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.a ()V]
+      [4] aload_0 v0
+      [5] ldc #15
+        + String [Device unlinked]
+      [7] invokespecial #87
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Ljava/lang/String;)V]
+      [10] new #28
+        + Class [android/content/Intent]
+      [13] dup
+      [14] aload_0 v0
+      [15] ldc #40
+        + Class [com/rgap/mylostdevice/ActivityLogin]
+      [17] invokespecial #68
+        + Methodref [android/content/Intent.<init> (Landroid/content/Context;Ljava/lang/Class;)V]
+      [20] astore_2 v2
+      [21] aload_0 v0
+      [22] aload_2 v2
+      [23] invokevirtual #96
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.startActivity (Landroid/content/Intent;)V]
+      [26] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    Access flags: 0x1
+      = public boolean onOptionsItemSelected(android.view.MenuItem)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 42, locals = 2, stack = 3):
+      [0] aload_1 v1
+      [1] invokeinterface #106
+        + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
+      [6] lookupswitch (1 offsets, default=30) (target=36)
+        2131296273: offset = 18, target = 24
+        default: offset = 30, target = 36
+      [24] aload_0 v0
+      [25] aload_0 v0
+      [26] ldc #5
+        + Integer [2131034133]
+      [28] invokevirtual #92
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.getString (I)Ljava/lang/String;]
+      [31] invokevirtual #86
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.a (Ljava/lang/String;)V]
+      [34] iconst_1
+      [35] ireturn
+      [36] aload_0 v0
+      [37] aload_1 v1
+      [38] invokespecial #58
+        + Methodref [android/app/Activity.onOptionsItemSelected (Landroid/view/MenuItem;)Z]
+      [41] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 2):
+        - [24] Var: ..., Stack: (empty)
+        - [36] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;)V
+    Access flags: 0x1
+      = public void a(java.lang.String)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 53, locals = 4, stack = 5):
+      [0] new #27
+        + Class [android/app/AlertDialog$Builder]
+      [3] dup
+      [4] aload_0 v0
+      [5] invokespecial #62
+        + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
+      [8] astore_2 v2
+      [9] aload_2 v2
+      [10] ldc #11
+        + String [About This]
+      [12] invokevirtual #67
+        + Methodref [android/app/AlertDialog$Builder.setTitle (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [15] pop
+      [16] aload_2 v2
+      [17] aload_1 v1
+      [18] invokevirtual #65
+        + Methodref [android/app/AlertDialog$Builder.setMessage (Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;]
+      [21] pop
+      [22] aload_2 v2
+      [23] iconst_1
+      [24] invokevirtual #64
+        + Methodref [android/app/AlertDialog$Builder.setCancelable (Z)Landroid/app/AlertDialog$Builder;]
+      [27] pop
+      [28] aload_2 v2
+      [29] ldc #2
+        + Integer [17039370]
+      [31] new #42
+        + Class [com/rgap/mylostdevice/f]
+      [34] dup
+      [35] aload_0 v0
+      [36] invokespecial #97
+        + Methodref [com/rgap/mylostdevice/f.<init> (Lcom/rgap/mylostdevice/ActivityTabs;)V]
+      [39] invokevirtual #66
+        + Methodref [android/app/AlertDialog$Builder.setNeutralButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
+      [42] pop
+      [43] aload_2 v2
+      [44] invokevirtual #63
+        + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
+      [47] astore_3 v3
+      [48] aload_3 v3
+      [49] invokevirtual #61
+        + Methodref [android/app/AlertDialog.show ()V]
+      [52] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a(Lcom/rgap/mylostdevice/ActivityTabs;)D
+    Access flags: 0x1008
+      = static synthetic double a(com.rgap.mylostdevice.ActivityTabs)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #54
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.h D]
+      [4] dreturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       b(Lcom/rgap/mylostdevice/ActivityTabs;)D
+    Access flags: 0x1008
+      = static synthetic double b(com.rgap.mylostdevice.ActivityTabs)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] getfield #55
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.i D]
+      [4] dreturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/f
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.f extends java.lang.Object
+
+Interfaces (count = 1):
+  + Class [android/content/DialogInterface$OnClickListener]
+
+Constant Pool (count = 24):
+  + Class [android/content/DialogInterface]
+  + Class [android/content/DialogInterface$OnClickListener]
+  + Class [com/rgap/mylostdevice/f]
+  + Class [java/lang/Object]
+  + Fieldref [com/rgap/mylostdevice/f.a Lcom/rgap/mylostdevice/ActivityTabs;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + InterfaceMethodref [android/content/DialogInterface.cancel ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [a Lcom/rgap/mylostdevice/ActivityTabs;]
+  + NameAndType [cancel ()V]
+  + Utf8 [()V]
+  + Utf8 [(Landroid/content/DialogInterface;I)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;)V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityTabs;]
+  + Utf8 [a]
+  + Utf8 [android/content/DialogInterface]
+  + Utf8 [android/content/DialogInterface$OnClickListener]
+  + Utf8 [cancel]
+  + Utf8 [com/rgap/mylostdevice/f]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onClick]
+
+Fields (count = 1):
+  + Field:        a Lcom/rgap/mylostdevice/ActivityTabs;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityTabs a
+
+Methods (count = 2):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityTabs;)V
+    Access flags: 0x0
+      = f(com.rgap.mylostdevice.ActivityTabs)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #5
+        + Fieldref [com/rgap/mylostdevice/f.a Lcom/rgap/mylostdevice/ActivityTabs;]
+      [5] aload_0 v0
+      [6] invokespecial #6
+        + Methodref [java/lang/Object.<init> ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       onClick(Landroid/content/DialogInterface;I)V
+    Access flags: 0x1
+      = public void onClick(android.content.DialogInterface,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 7, locals = 3, stack = 1):
+      [0] aload_1 v1
+      [1] invokeinterface #7
+        + InterfaceMethodref [android/content/DialogInterface.cancel ()V]
+      [6] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
+_____________________________________________________________________
++ Program class: com/rgap/mylostdevice/g
+  Superclass:    java/lang/Thread
+  Major version: 0x33
+  Minor version: 0x0
+  Access flags:  0x20
+    = class com.rgap.mylostdevice.g extends java.lang.Thread
+
+Interfaces (count = 0):
+
+Constant Pool (count = 145):
+  + String [, ]
+  + String [Exception ]
+  + String [addReg]
+  + String [devid]
+  + String [devlocation]
+  + String [devstate]
+  + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceUpdate.php]
+  + String [userid]
+  + Class [android/util/Log]
+  + Class [com/rgap/mylostdevice/ActivityTabs]
+  + Class [com/rgap/mylostdevice/g]
+  + Class [java/lang/Exception]
+  + Class [java/lang/InterruptedException]
+  + Class [java/lang/String]
+  + Class [java/lang/StringBuilder]
+  + Class [java/lang/Thread]
+  + Class [java/util/ArrayList]
+  + Class [java/util/List]
+  + Class [org/apache/http/client/HttpClient]
+  + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Class [org/apache/http/client/methods/HttpPost]
+  + Class [org/apache/http/impl/client/DefaultHttpClient]
+  + Class [org/apache/http/message/BasicNameValuePair]
+  + Long [5000]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.a I]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.b I]
+  + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/g.a Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/g.b Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/g.c Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/g.d Ljava/lang/String;]
+  + Fieldref [com/rgap/mylostdevice/g.e Z]
+  + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+  + Fieldref [com/rgap/mylostdevice/g.g Z]
+  + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.a (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+  + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+  + Methodref [com/rgap/mylostdevice/g.a ()V]
+  + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+  + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+  + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
+  + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  + Methodref [java/lang/Thread.<init> ()V]
+  + Methodref [java/lang/Thread.sleep (J)V]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+  + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+  + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+  + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+  + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/util/List;)V]
+  + NameAndType [a ()V]
+  + NameAndType [a (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+  + NameAndType [a I]
+  + NameAndType [a Ljava/lang/String;]
+  + NameAndType [add (Ljava/lang/Object;)Z]
+  + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+  + NameAndType [b I]
+  + NameAndType [b Ljava/lang/String;]
+  + NameAndType [c Ljava/lang/String;]
+  + NameAndType [d Ljava/lang/String;]
+  + NameAndType [e (Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [e Z]
+  + NameAndType [execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + NameAndType [f Lcom/rgap/mylostdevice/ActivityTabs;]
+  + NameAndType [g Z]
+  + NameAndType [printStackTrace ()V]
+  + NameAndType [setEntity (Lorg/apache/http/HttpEntity;)V]
+  + NameAndType [sleep (J)V]
+  + NameAndType [toString ()Ljava/lang/String;]
+  + NameAndType [valueOf (D)Ljava/lang/String;]
+  + NameAndType [valueOf (I)Ljava/lang/String;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(D)Ljava/lang/String;]
+  + Utf8 [(I)Ljava/lang/String;]
+  + Utf8 [(J)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;)D]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;)V]
+  + Utf8 [(Lcom/rgap/mylostdevice/ActivityTabs;Z)V]
+  + Utf8 [(Ljava/lang/Object;)Z]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/util/List;)V]
+  + Utf8 [(Lorg/apache/http/HttpEntity;)V]
+  + Utf8 [(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+  + Utf8 [, ]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [Exception ]
+  + Utf8 [I]
+  + Utf8 [Lcom/rgap/mylostdevice/ActivityTabs;]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [StackMapTable]
+  + Utf8 [Z]
+  + Utf8 [a]
+  + Utf8 [add]
+  + Utf8 [addReg]
+  + Utf8 [android/util/Log]
+  + Utf8 [append]
+  + Utf8 [b]
+  + Utf8 [c]
+  + Utf8 [com/rgap/mylostdevice/ActivityTabs]
+  + Utf8 [com/rgap/mylostdevice/g]
+  + Utf8 [d]
+  + Utf8 [devid]
+  + Utf8 [devlocation]
+  + Utf8 [devstate]
+  + Utf8 [e]
+  + Utf8 [execute]
+  + Utf8 [f]
+  + Utf8 [g]
+  + Utf8 [http://relguzman.com/MyLostDevice/controller_client/corDeviceUpdate.php]
+  + Utf8 [java/lang/Exception]
+  + Utf8 [java/lang/InterruptedException]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/lang/StringBuilder]
+  + Utf8 [java/lang/Thread]
+  + Utf8 [java/util/ArrayList]
+  + Utf8 [java/util/List]
+  + Utf8 [org/apache/http/client/HttpClient]
+  + Utf8 [org/apache/http/client/entity/UrlEncodedFormEntity]
+  + Utf8 [org/apache/http/client/methods/HttpPost]
+  + Utf8 [org/apache/http/impl/client/DefaultHttpClient]
+  + Utf8 [org/apache/http/message/BasicNameValuePair]
+  + Utf8 [printStackTrace]
+  + Utf8 [run]
+  + Utf8 [setEntity]
+  + Utf8 [sleep]
+  + Utf8 [toString]
+  + Utf8 [userid]
+  + Utf8 [valueOf]
+
+Fields (count = 7):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String a
+  + Field:        b Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String b
+  + Field:        c Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String c
+  + Field:        d Ljava/lang/String;
+    Access flags: 0x0
+      = java.lang.String d
+  + Field:        e Z
+    Access flags: 0x0
+      = boolean e
+  + Field:        g Z
+    Access flags: 0x42
+      = private volatile boolean g
+  + Field:        f Lcom/rgap/mylostdevice/ActivityTabs;
+    Access flags: 0x1010
+      = final synthetic com.rgap.mylostdevice.ActivityTabs f
+
+Methods (count = 5):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityTabs;)V
+    Access flags: 0x0
+      = g(com.rgap.mylostdevice.ActivityTabs)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 89, locals = 2, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [5] aload_0 v0
+      [6] invokespecial #47
+        + Methodref [java/lang/Thread.<init> ()V]
+      [9] aload_0 v0
+      [10] iconst_0
+      [11] putfield #33
+        + Fieldref [com/rgap/mylostdevice/g.e Z]
+      [14] aload_0 v0
+      [15] iconst_0
+      [16] putfield #35
+        + Fieldref [com/rgap/mylostdevice/g.g Z]
+      [19] aload_0 v0
+      [20] aload_1 v1
+      [21] getfield #26
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.a I]
+      [24] invokestatic #43
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [27] putfield #29
+        + Fieldref [com/rgap/mylostdevice/g.a Ljava/lang/String;]
+      [30] aload_0 v0
+      [31] aload_1 v1
+      [32] getfield #27
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.b I]
+      [35] invokestatic #43
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [38] putfield #30
+        + Fieldref [com/rgap/mylostdevice/g.b Ljava/lang/String;]
+      [41] aload_0 v0
+      [42] new #15
+        + Class [java/lang/StringBuilder]
+      [45] dup
+      [46] invokespecial #44
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [49] aload_1 v1
+      [50] invokestatic #37
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.a (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+      [53] invokestatic #42
+        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+      [56] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [59] ldc #1
+        + String [, ]
+      [61] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [64] aload_1 v1
+      [65] invokestatic #38
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+      [68] invokestatic #42
+        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+      [71] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [74] invokevirtual #46
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [77] putfield #31
+        + Fieldref [com/rgap/mylostdevice/g.c Ljava/lang/String;]
+      [80] aload_0 v0
+      [81] aload_1 v1
+      [82] getfield #28
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [85] putfield #32
+        + Fieldref [com/rgap/mylostdevice/g.d Ljava/lang/String;]
+      [88] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <init>(Lcom/rgap/mylostdevice/ActivityTabs;Z)V
+    Access flags: 0x0
+      = g(com.rgap.mylostdevice.ActivityTabs,boolean)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 94, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] putfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [5] aload_0 v0
+      [6] invokespecial #47
+        + Methodref [java/lang/Thread.<init> ()V]
+      [9] aload_0 v0
+      [10] iconst_0
+      [11] putfield #33
+        + Fieldref [com/rgap/mylostdevice/g.e Z]
+      [14] aload_0 v0
+      [15] iconst_0
+      [16] putfield #35
+        + Fieldref [com/rgap/mylostdevice/g.g Z]
+      [19] aload_0 v0
+      [20] iconst_1
+      [21] putfield #33
+        + Fieldref [com/rgap/mylostdevice/g.e Z]
+      [24] aload_0 v0
+      [25] aload_1 v1
+      [26] getfield #26
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.a I]
+      [29] invokestatic #43
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [32] putfield #29
+        + Fieldref [com/rgap/mylostdevice/g.a Ljava/lang/String;]
+      [35] aload_0 v0
+      [36] aload_1 v1
+      [37] getfield #27
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.b I]
+      [40] invokestatic #43
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [43] putfield #30
+        + Fieldref [com/rgap/mylostdevice/g.b Ljava/lang/String;]
+      [46] aload_0 v0
+      [47] new #15
+        + Class [java/lang/StringBuilder]
+      [50] dup
+      [51] invokespecial #44
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [54] aload_1 v1
+      [55] invokestatic #37
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.a (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+      [58] invokestatic #42
+        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+      [61] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [64] ldc #1
+        + String [, ]
+      [66] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [69] aload_1 v1
+      [70] invokestatic #38
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+      [73] invokestatic #42
+        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+      [76] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [79] invokevirtual #46
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [82] putfield #31
+        + Fieldref [com/rgap/mylostdevice/g.c Ljava/lang/String;]
+      [85] aload_0 v0
+      [86] aload_1 v1
+      [87] getfield #28
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [90] putfield #32
+        + Fieldref [com/rgap/mylostdevice/g.d Ljava/lang/String;]
+      [93] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()V
+    Access flags: 0x1
+      = public void a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 85, locals = 1, stack = 4):
+      [0] aload_0 v0
+      [1] aload_0 v0
+      [2] getfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [5] getfield #26
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.a I]
+      [8] invokestatic #43
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [11] putfield #29
+        + Fieldref [com/rgap/mylostdevice/g.a Ljava/lang/String;]
+      [14] aload_0 v0
+      [15] aload_0 v0
+      [16] getfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [19] getfield #27
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.b I]
+      [22] invokestatic #43
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [25] putfield #30
+        + Fieldref [com/rgap/mylostdevice/g.b Ljava/lang/String;]
+      [28] aload_0 v0
+      [29] new #15
+        + Class [java/lang/StringBuilder]
+      [32] dup
+      [33] invokespecial #44
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [36] aload_0 v0
+      [37] getfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [40] invokestatic #37
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.a (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+      [43] invokestatic #42
+        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+      [46] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [49] ldc #1
+        + String [, ]
+      [51] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [54] aload_0 v0
+      [55] getfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [58] invokestatic #38
+        + Methodref [com/rgap/mylostdevice/ActivityTabs.b (Lcom/rgap/mylostdevice/ActivityTabs;)D]
+      [61] invokestatic #42
+        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
+      [64] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [67] invokevirtual #46
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [70] putfield #31
+        + Fieldref [com/rgap/mylostdevice/g.c Ljava/lang/String;]
+      [73] aload_0 v0
+      [74] aload_0 v0
+      [75] getfield #34
+        + Fieldref [com/rgap/mylostdevice/g.f Lcom/rgap/mylostdevice/ActivityTabs;]
+      [78] getfield #28
+        + Fieldref [com/rgap/mylostdevice/ActivityTabs.c Ljava/lang/String;]
+      [81] putfield #32
+        + Fieldref [com/rgap/mylostdevice/g.d Ljava/lang/String;]
+      [84] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       run()V
+    Access flags: 0x1
+      = public void run()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 198, locals = 5, stack = 5):
+      [0] aload_0 v0
+      [1] getfield #35
+        + Fieldref [com/rgap/mylostdevice/g.g Z]
+      [4] ifne +193 (target=197)
+      [7] new #22
+        + Class [org/apache/http/impl/client/DefaultHttpClient]
+      [10] dup
+      [11] invokespecial #53
+        + Methodref [org/apache/http/impl/client/DefaultHttpClient.<init> ()V]
+      [14] astore_1 v1
+      [15] new #21
+        + Class [org/apache/http/client/methods/HttpPost]
+      [18] dup
+      [19] ldc #7
+        + String [http://relguzman.com/MyLostDevice/controller_client/corDeviceUpdate.php]
+      [21] invokespecial #51
+        + Methodref [org/apache/http/client/methods/HttpPost.<init> (Ljava/lang/String;)V]
+      [24] astore_2 v2
+      [25] new #17
+        + Class [java/util/ArrayList]
+      [28] dup
+      [29] invokespecial #49
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [32] astore_3 v3
+      [33] aload_3 v3
+      [34] new #23
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [37] dup
+      [38] ldc #8
+        + String [userid]
+      [40] aload_0 v0
+      [41] getfield #29
+        + Fieldref [com/rgap/mylostdevice/g.a Ljava/lang/String;]
+      [44] invokespecial #54
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [47] invokeinterface #55
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [52] pop
+      [53] aload_3 v3
+      [54] new #23
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [57] dup
+      [58] ldc #4
+        + String [devid]
+      [60] aload_0 v0
+      [61] getfield #30
+        + Fieldref [com/rgap/mylostdevice/g.b Ljava/lang/String;]
+      [64] invokespecial #54
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [67] invokeinterface #55
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [72] pop
+      [73] aload_3 v3
+      [74] new #23
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [77] dup
+      [78] ldc #5
+        + String [devlocation]
+      [80] aload_0 v0
+      [81] getfield #31
+        + Fieldref [com/rgap/mylostdevice/g.c Ljava/lang/String;]
+      [84] invokespecial #54
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [87] invokeinterface #55
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [92] pop
+      [93] aload_3 v3
+      [94] new #23
+        + Class [org/apache/http/message/BasicNameValuePair]
+      [97] dup
+      [98] ldc #6
+        + String [devstate]
+      [100] aload_0 v0
+      [101] getfield #32
+        + Fieldref [com/rgap/mylostdevice/g.d Ljava/lang/String;]
+      [104] invokespecial #54
+        + Methodref [org/apache/http/message/BasicNameValuePair.<init> (Ljava/lang/String;Ljava/lang/String;)V]
+      [107] invokeinterface #55
+        + InterfaceMethodref [java/util/List.add (Ljava/lang/Object;)Z]
+      [112] pop
+      [113] aload_2 v2
+      [114] new #20
+        + Class [org/apache/http/client/entity/UrlEncodedFormEntity]
+      [117] dup
+      [118] aload_3 v3
+      [119] invokespecial #50
+        + Methodref [org/apache/http/client/entity/UrlEncodedFormEntity.<init> (Ljava/util/List;)V]
+      [122] invokevirtual #52
+        + Methodref [org/apache/http/client/methods/HttpPost.setEntity (Lorg/apache/http/HttpEntity;)V]
+      [125] aload_1 v1
+      [126] aload_2 v2
+      [127] invokeinterface #56
+        + InterfaceMethodref [org/apache/http/client/HttpClient.execute (Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;]
+      [132] astore v4
+      [134] goto +32 (target=166)
+      [137] astore_3 v3
+      [138] ldc #3
+        + String [addReg]
+      [140] new #15
+        + Class [java/lang/StringBuilder]
+      [143] dup
+      [144] invokespecial #44
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [147] ldc #2
+        + String [Exception ]
+      [149] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [152] aload_3 v3
+      [153] invokevirtual #40
+        + Methodref [java/lang/Exception.toString ()Ljava/lang/String;]
+      [156] invokevirtual #45
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [159] invokevirtual #46
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [162] invokestatic #36
+        + Methodref [android/util/Log.e (Ljava/lang/String;Ljava/lang/String;)I]
+      [165] pop
+      [166] ldc2_w #24
+        + Long [5000]
+      [169] invokestatic #48
+        + Methodref [java/lang/Thread.sleep (J)V]
+      [172] goto +8 (target=180)
+      [175] astore_3 v3
+      [176] aload_3 v3
+      [177] invokevirtual #41
+        + Methodref [java/lang/InterruptedException.printStackTrace ()V]
+      [180] aload_0 v0
+      [181] invokevirtual #39
+        + Methodref [com/rgap/mylostdevice/g.a ()V]
+      [184] aload_0 v0
+      [185] getfield #33
+        + Fieldref [com/rgap/mylostdevice/g.e Z]
+      [188] ifeq +6 (target=194)
+      [191] goto +6 (target=197)
+      [194] goto -194 (target=0)
+      [197] return
+      Code attribute exceptions (count = 2):
+      - ExceptionInfo (25 -> 134: 137):
+      + Class [java/lang/Exception]
+      - ExceptionInfo (166 -> 172: 175):
+      + Class [java/lang/InterruptedException]
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 7):
+        - [0] Var: ..., Stack: (empty)
+        - [137] Var: [a:com/rgap/mylostdevice/g][a:org/apache/http/client/HttpClient][a:org/apache/http/client/methods/HttpPost], Stack: [a:java/lang/Exception]
+        - [166] Var: ..., Stack: (empty)
+        - [175] Var: ..., Stack: [a:java/lang/InterruptedException]
+        - [180] Var: ..., Stack: (empty)
+        - [194] Var: -2, Stack: (empty)
+        - [197] Var: ..., Stack: (empty)
+  + Method:       b()V
+    Access flags: 0x21
+      = public synchronized void b()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 6, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] iconst_1
+      [2] putfield #35
+        + Fieldref [com/rgap/mylostdevice/g.g Z]
+      [5] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 0):
+
