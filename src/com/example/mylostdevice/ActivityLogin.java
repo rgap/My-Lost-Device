@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
 import android.util.Log;
@@ -52,6 +51,7 @@ public class ActivityLogin extends Activity{
         loginemail = (EditText) findViewById(R.id.loginemail);
         loginpass = (EditText) findViewById(R.id.loginpass);
 
+
         pb=(ProgressBar)findViewById(R.id.progressBarLogin);
         pb.setVisibility(View.GONE);
 
@@ -68,7 +68,21 @@ public class ActivityLogin extends Activity{
         return true;
     }
 
+    public boolean notFilledData(){
+        if(loginemail.getText().toString().equals("") || loginpass.getText().toString().equals(""))
+            return true;
+
+        return false;
+    }
+
     public void actionLogin(View v){
+
+        //Check spaces
+        if(notFilledData()){
+            tToast("You must fill all spaces");
+            return;
+        }
+
 
         pb.setVisibility(View.VISIBLE);
 
@@ -154,7 +168,7 @@ public class ActivityLogin extends Activity{
         @Override
         public void run() {
 
-            Log.e("addReg", email+ " "+pass);
+            //Log.e("addReg", email+ " "+pass);
 
             HttpClient httpclient=new DefaultHttpClient();
             HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corUserCheck.php");
@@ -181,7 +195,7 @@ public class ActivityLogin extends Activity{
                 userid_g =  Integer.parseInt(obj.getString("resp"));
 
 
-                Log.e("addReg", obj.getString("resp"));
+                //Log.e("addReg", obj.getString("resp"));
                 //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
 
             } catch (Exception e){
@@ -231,7 +245,7 @@ public class ActivityLogin extends Activity{
                 exist_dev =  Integer.parseInt(obj.getString("resp"));
 
 
-                Log.e("addReg", obj.getString("resp"));
+                //Log.e("addReg", obj.getString("resp"));
                 //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
 
             } catch (Exception e){
@@ -282,7 +296,7 @@ public class ActivityLogin extends Activity{
                 devid_g =  Integer.parseInt(obj.getString("resp"));
 
 
-                Log.e("addReg", "D - "+ obj.getString("resp"));
+                //Log.e("addReg", "D - "+ obj.getString("resp"));
                 //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
 
             } catch (Exception e){

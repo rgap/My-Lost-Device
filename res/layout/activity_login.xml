@@ -6,37 +6,12 @@
 
     <!-- Login progress -->
 
-    <LinearLayout
-            android:id="@+id/login_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:visibility="gone" >
-
-        <ProgressBar
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp" />
-
-        <TextView
-                android:id="@+id/login_status_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/login_progress_signing_in"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-    </LinearLayout>
-
     <!-- Login form -->
 
     <ScrollView
             android:id="@+id/login_form"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:background="@color/color_orange">
+            android:layout_height="match_parent" android:background="#000000" android:clickable="false">
 
         <LinearLayout
                 style="@style/LoginFormContainer"
@@ -80,14 +55,15 @@
                         android:layout_height="fill_parent"
                         android:text="@string/bt_goregister"
                         android:clickable="true" android:onClick="actionGoRegister"
-                        style="@style/LoginFormContainer" android:layout_gravity="center_horizontal|right"/>
+                        style="@style/LoginFormContainer" android:layout_gravity="center_horizontal|right"
+                        android:background="@drawable/custom_button"/>
                 <Button
                         android:id="@+id/sign_in"
                         android:layout_width="175dp"
                         android:layout_height="fill_parent"
                         android:text="@string/action_sign_in_short"
                         android:onClick="actionLogin" android:clickable="true" style="@style/LoginFormContainer"
-                        />
+                        android:background="@drawable/custom_button"/>
             </LinearLayout>
             <ProgressBar android:id="@+id/progressBarLogin"
                          style="?android:attr/progressBarStyleLarge"

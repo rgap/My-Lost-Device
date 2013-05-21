@@ -7,12 +7,21 @@
     android:orientation="vertical" >
 
     <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="218dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/label_configdesc"
+            android:text="@string/label_descapp"
             android:layout_marginTop="20dp"
-            android:id="@+id/textView" android:layout_gravity="center" android:autoText="false"/>
+            android:id="@+id/descApp" android:layout_gravity="center" android:autoText="false"/>
+
+    <TextView
+            android:id="@+id/link"
+            android:autoLink="web"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_linkweb"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center" android:autoText="false" android:textSize="20dp"/>
 
     <ToggleButton
             android:layout_width="182dp"

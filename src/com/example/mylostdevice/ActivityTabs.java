@@ -1,6 +1,8 @@
 package com.example.mylostdevice;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.location.Criteria;
 import android.location.Location;
@@ -11,8 +13,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.*;
 import android.widget.TabHost.TabSpec;
 import org.apache.http.HttpResponse;
@@ -89,7 +91,7 @@ public class ActivityTabs extends Activity implements LocationListener {
 
         devid_g = preferences.getInt("devid",0);
 
-        Log.e("addReg", "userid ----> " + String.valueOf(userid_g));
+        //Log.e("addReg", "userid ----> " + String.valueOf(userid_g));
 	}
 
     @Override
@@ -102,27 +104,26 @@ public class ActivityTabs extends Activity implements LocationListener {
         TUpdateDev = new UpdateDeviceThread(true);
         TUpdateDev.start();
 
-        while(TUpdateDev.isAlive());
-
-        TUpdateDev=null;
-        tToast("Device unlinked");
     }
 
     @Override
-    public void onStop(){
-        updateExitDevice();
+    protected void onStop() {
+
+        super.onPause();
+        locationManager.removeUpdates(this);
     }
 
     @Override
-    public void onDestroy(){
+    protected void onDestroy() {
         updateExitDevice();
+        super.onPause();
+        locationManager.removeUpdates(this);
     }
+
+
 
     @Override
     protected void onPause() {
-
-        updateExitDevice();
-
         super.onPause();
         locationManager.removeUpdates(this);
     }
@@ -189,29 +190,18 @@ public class ActivityTabs extends Activity implements LocationListener {
         } else {
             state_g = "0";
 
+            TUpdateDev.requestStop();
+
             TUpdateDev = new UpdateDeviceThread(true);
             TUpdateDev.start();
-
-            while(TUpdateDev.isAlive());
-
-            TUpdateDev.requestStop();
-            TUpdateDev=null;
 
             tToast("Device disabled");
         }
 
     }
 
-    public void actionUnlink(View v){
+    public void actionUnlink(View v){;
 
-        state_g = "2";
-
-        TUpdateDev = new UpdateDeviceThread(true);
-        TUpdateDev.start();
-
-        while(TUpdateDev.isAlive());
-
-        TUpdateDev=null;
         tToast("Device unlinked");
 
         Intent i=new Intent(this,ActivityLogin.class);
@@ -274,7 +264,7 @@ public class ActivityTabs extends Activity implements LocationListener {
                     // Execute HTTP Post Request
                     HttpResponse response = httpclient.execute(httppost);
 
-                    Log.d("addReg","ACTUALIZADO " + userid +" "+ devid);
+                    //Log.d("addReg","ACTUALIZADO " + userid +" "+ devid);
 
 
                 } catch (Exception e){
@@ -290,7 +280,7 @@ public class ActivityTabs extends Activity implements LocationListener {
 
                 updateValues();
 
-                Log.d("addReg",devlocation +" "+ devid + " " + devstate);
+                //Log.d("addReg",devlocation +" "+ devid + " " + devstate);
 
                 if(unciclo) break;
 
@@ -300,6 +290,36 @@ public class ActivityTabs extends Activity implements LocationListener {
         public synchronized void requestStop() {
             stop = true;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menu_about:
+
+                showAlert(getString(R.string.created_by));
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void showAlert(String s){
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+        builder1.setTitle("About This");
+        builder1.setMessage(s);
+        builder1.setCancelable(true);
+        builder1.setNeutralButton(android.R.string.ok,
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
     }
 
 

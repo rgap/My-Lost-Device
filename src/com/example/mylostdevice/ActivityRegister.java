@@ -4,17 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Point;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
-import android.view.WindowManager;
 import android.widget.*;
 import android.view.Menu;
 import android.view.View;
@@ -23,16 +15,11 @@ import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONTokener;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,6 +38,8 @@ public class ActivityRegister extends Activity {
     private int userid;
     private int devid;
 
+    private int registerUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,8 +52,9 @@ public class ActivityRegister extends Activity {
         pb=(ProgressBar)findViewById(R.id.progressBarRegister);
 
         pb.setVisibility(View.GONE);
-    }
 
+        registerUser = 1;
+    }
 
 
     @Override
@@ -74,15 +64,38 @@ public class ActivityRegister extends Activity {
         return true;
     }
 
+    public boolean notFilledData(){
+        if(regemail.getText().toString().equals("") || regpass.getText().toString().equals(""))
+            return true;
+
+        return false;
+    }
+
     public void actionRegister(View v){
 
+        //Check spaces
+        if(notFilledData()){
+            tToast("You must fill all spaces");
+            return;
+        }
+
+
         pb.setVisibility(View.VISIBLE);
+
 
         Thread TRegistroUsu = new Thread(new AddUserRunnable(regemail.getText().toString(),regpass.getText().toString()));
         TRegistroUsu.start();
 
-
         while(TRegistroUsu.isAlive());
+
+
+        if(registerUser == 0){
+            pb.setVisibility(View.GONE);
+
+            tToast("User already registered");
+
+            return;
+        }
 
         SharedPreferences preferences = getSharedPreferences("PrefFile", MODE_PRIVATE);
 
@@ -117,6 +130,8 @@ public class ActivityRegister extends Activity {
 
         Intent i=new Intent(this,ActivityTabs.class);
         startActivity(i);
+
+
 
     }
 
@@ -161,11 +176,14 @@ public class ActivityRegister extends Activity {
 
                 JSONObject obj=new JSONObject(payload);
 
+                if(obj.getString("resp") == "0") registerUser = 0;
+                else{
+                    userid =  Integer.parseInt(obj.getString("resp"));
+                    registerUser = 1;
+                }
 
-                userid =  Integer.parseInt(obj.getString("resp"));
 
-
-                Log.e("addReg", obj.getString("resp"));
+                //Log.e("addReg", obj.getString("resp"));
                 //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
 
             } catch (Exception e){
@@ -217,7 +235,7 @@ public class ActivityRegister extends Activity {
                 devid =  Integer.parseInt(obj.getString("resp"));
 
 
-                Log.e("addReg", "D - "+ obj.getString("resp"));
+                //Log.e("addReg", "D - "+ obj.getString("resp"));
                 //Log.e("addReg", String.valueOf(preferences.getInt("userid",0)));
 
             } catch (Exception e){
@@ -226,5 +244,6 @@ public class ActivityRegister extends Activity {
             }
         }
     }
+
 }
 

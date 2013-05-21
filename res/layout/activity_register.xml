@@ -6,41 +6,16 @@
 
     <!-- Login progress -->
 
-    <LinearLayout
-            android:id="@+id/login_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:visibility="gone" >
-
-        <ProgressBar
-                style="?android:attr/progressBarStyleLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp" />
-
-        <TextView
-                android:id="@+id/login_status_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:fontFamily="sans-serif-light"
-                android:text="@string/login_progress_signing_in"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-    </LinearLayout>
-
     <!-- Login form -->
 
     <ScrollView
             android:id="@+id/login_form"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:background="@color/color_orange">
+            android:layout_height="match_parent" android:background="@color/color_black" android:clickable="false">
 
         <LinearLayout
                 style="@style/LoginFormContainer"
-                android:orientation="vertical" >
+                android:orientation="vertical" android:baselineAligned="false">
 
             <ImageView
                     android:layout_width="100dp"
@@ -90,12 +65,12 @@
                              android:layout_alignParentBottom="true" android:layout_alignParentTop="true"
                         />
                 <Button
-                        android:id="@+id/sign_in_button"
+                        android:id="@+id/bregisteruser"
                         android:layout_width="181dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
                         android:text="@string/bt_register" style="@style/LoginFormContainer"
-                        android:onClick="actionRegister"/>
+                        android:onClick="actionRegister" android:background="@drawable/custom_button"/>
             </LinearLayout>
 
         </LinearLayout>

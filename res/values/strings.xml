@@ -16,7 +16,11 @@
     <string name="label_listdevs">Linked devices list</string>
     <string name="label_configdesc">Device configuration</string>
 
-    <string name="bt_unlink">Unlink device</string>
+    <string name="label_descapp">You can see the feed from this application</string>
+
+    <string name="label_linkweb">relguzman.com/MyLostDevice</string>
+
+    <string name="bt_unlink">Unlink device or logout</string>
     <string name="bt_enable_dev">Enable device</string>
     <string name="bt_disable_dev">Disable device</string>
 
@@ -28,6 +32,8 @@
     <color name="color_black">#000000</color>
     <color name="color_white">#FFFFFF</color>
     <color name="color_orange">#f9951b</color>
-    <color name="color_default">#deeae8</color>
+    <color name="color_default">#8c98a5</color>
+
+    <string name="created_by">Created By Rel Guzman</string>
 
 </resources>
