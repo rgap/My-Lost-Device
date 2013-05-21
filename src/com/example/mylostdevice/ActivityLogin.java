@@ -3,6 +3,7 @@ package com.example.mylostdevice;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -57,6 +58,10 @@ public class ActivityLogin extends Activity{
     }
 
     @Override
+    public void onBackPressed() {
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.activity_main, menu);
@@ -77,6 +82,7 @@ public class ActivityLogin extends Activity{
 
         if(userid_g == 0){
             tToast("Incorrect Data");
+            pb.setVisibility(View.GONE);
             return;
         }
         else{
@@ -92,7 +98,7 @@ public class ActivityLogin extends Activity{
 
             devid_g= preferences.getInt("devid",0);
 
-            Thread TSearchDev = new Thread(new CheckLoginRunnable(String.valueOf(userid_g), String.valueOf(devid_g)));
+            Thread TSearchDev = new Thread(new SearchDevRunnable(String.valueOf(userid_g), String.valueOf(devid_g)));
             TSearchDev.start();
 
             while(TSearchDev.isAlive());
@@ -100,7 +106,13 @@ public class ActivityLogin extends Activity{
 
         if(exist_dev != 1){
 
-            String devType = android.os.Build.MANUFACTURER +" - "+ System.getProperty("os.version");
+            DisplayMetrics metrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+            String h = Integer.toString(metrics.heightPixels);
+            String w = Integer.toString(metrics.widthPixels);
+
+            String devType = android.os.Build.MANUFACTURER + ", Dimension: "+ h + "x" + w + ", Android: "+ System.getProperty("os.version");
             String devLocation = "0";
 
             Thread TRegistroDev = new Thread(new AddDeviceRunnable(String.valueOf(userid_g),devType,devLocation));
@@ -141,6 +153,8 @@ public class ActivityLogin extends Activity{
 
         @Override
         public void run() {
+
+            Log.e("addReg", email+ " "+pass);
 
             HttpClient httpclient=new DefaultHttpClient();
             HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corUserCheck.php");

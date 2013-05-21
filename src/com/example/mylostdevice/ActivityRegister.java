@@ -4,13 +4,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Point;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
+import android.view.WindowManager;
 import android.widget.*;
 import android.view.Menu;
 import android.view.View;
@@ -89,7 +93,13 @@ public class ActivityRegister extends Activity {
 
         //INSERTAR DEVICE
 
-        String devType = android.os.Build.MANUFACTURER +" - "+ System.getProperty("os.version");
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+        String h = Integer.toString(metrics.heightPixels);
+        String w = Integer.toString(metrics.widthPixels);
+
+        String devType = android.os.Build.MANUFACTURER + ", Dimension: "+ h + "x" + w + ", Android: "+ System.getProperty("os.version");
         String devLocation = "0";
 
         Thread TRegistroDev = new Thread(new AddDeviceRunnable(String.valueOf(userid),devType,devLocation));

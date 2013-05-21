@@ -8,7 +8,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
@@ -23,13 +22,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,6 +45,9 @@ public class ActivityTabs extends Activity implements LocationListener {
     private double lat;
     private double lng;
 
+
+    public volatile UpdateDeviceThread TUpdateDev;
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -62,19 +58,12 @@ public class ActivityTabs extends Activity implements LocationListener {
         tab_host = (TabHost) findViewById(android.R.id.tabhost);
         tab_host.setup();
 
-        TabSpec tspec_t1;
+        TabSpec tspec;
 
-        tspec_t1 = tab_host.newTabSpec("tag1");
-        tspec_t1.setIndicator("Devices List");
-        tspec_t1.setContent(R.layout.tab1);
-        tab_host.addTab(tspec_t1);
-
-        TabSpec tspec_t2;
-
-        tspec_t2 = tab_host.newTabSpec("tag2");
-        tspec_t2.setIndicator("Configuration");
-        tspec_t2.setContent(R.layout.tab2);
-        tab_host.addTab(tspec_t2);
+        tspec = tab_host.newTabSpec("tag2");
+        tspec.setIndicator("Configuration");
+        tspec.setContent(R.layout.tab);
+        tab_host.addTab(tspec);
 
         //LOCATION
 
@@ -101,80 +90,41 @@ public class ActivityTabs extends Activity implements LocationListener {
         devid_g = preferences.getInt("devid",0);
 
         Log.e("addReg", "userid ----> " + String.valueOf(userid_g));
-
-        //LISTA
-
-        /*
-        Device[] devices={
-                new Device("afas","sfa","fa"),
-                new Device("afas","sfa","fa"),
-                new Device("afas","sfa","fa"),
-                new Device("afas","sfa","fa"),
-                new Device("afas","sfa","fa"),
-                new Device("afas","sfa","fa"),
-        };
-        */
-
-        //devices.
-
-        /*
-        AdapterDevices adapter=new AdapterDevices(devices);
-        ListView listView=(ListView)findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-        */
-
-        //ACTUALIZAR
-
-        Thread TUpdateDev = new Thread(new UpdateDeviceRunnable());
-        TUpdateDev.start();
-
 	}
 
+    @Override
+    public void onBackPressed() {
+    }
 
-    class AdapterDevices extends ArrayAdapter<Device> {
+    public void updateExitDevice(){
+        state_g = "2";
 
-        public AdapterDevices(Device[]device) {
-            super(getApplicationContext(),0,device);
-        }
+        TUpdateDev = new UpdateDeviceThread(true);
+        TUpdateDev.start();
 
+        while(TUpdateDev.isAlive());
 
-        private class Holder {
+        TUpdateDev=null;
+        tToast("Device unlinked");
+    }
 
-            public TextView txdevType;
-            public TextView txdevLoc;
-            public TextView txdevState;
+    @Override
+    public void onStop(){
+        updateExitDevice();
+    }
 
-            public Holder(View l) {
-                txdevType=(TextView)l.findViewById(R.id.devType);
-                txdevLoc=(TextView)l.findViewById(R.id.devLoc);
-                txdevState=(TextView)l.findViewById(R.id.devState);
-            }
-        }
+    @Override
+    public void onDestroy(){
+        updateExitDevice();
+    }
 
-        public View getView(int position, View convertView, ViewGroup parent)
-        {
-            Device p=getItem(position);
-            if(convertView!=null) {
-                Log.d("ttt","not null");
-            }
-            RelativeLayout l;
-            Holder h;
-            if(convertView==null) {
-                l=(RelativeLayout)getLayoutInflater().inflate(R.layout.list_row_layout, null);
-                h=new Holder(l);
-                l.setTag(h);
-            }
-            else {
-                l=(RelativeLayout)convertView;
-                h=(Holder)l.getTag();
-            }
+    @Override
+    protected void onPause() {
 
-            h.txdevType.setText(p.devtype);
-            h.txdevLoc.setText(p.devlocation);
-            h.txdevState.setText(p.devstate);
+        updateExitDevice();
 
-            return l;
-        }
+        super.onPause();
+        locationManager.removeUpdates(this);
     }
 
     private void tToast(String s) {
@@ -190,11 +140,6 @@ public class ActivityTabs extends Activity implements LocationListener {
         locationManager.requestLocationUpdates(provider, 400, 1, this);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        locationManager.removeUpdates(this);
-    }
 
     @Override
     public void onLocationChanged(Location location) {
@@ -227,80 +172,73 @@ public class ActivityTabs extends Activity implements LocationListener {
 		return true;
 	}
 
-    public void actionChangeState(View v){
+    public synchronized void actionChangeState(View v){
 
         boolean on = ((ToggleButton) v).isChecked();
 
         if (on) {
             state_g = "1";
+
+            //ACTUALIZAR
+
+            TUpdateDev = new UpdateDeviceThread();
+            TUpdateDev.start();
+
+            tToast("Device enabled");
+
         } else {
             state_g = "0";
+
+            TUpdateDev = new UpdateDeviceThread(true);
+            TUpdateDev.start();
+
+            while(TUpdateDev.isAlive());
+
+            TUpdateDev.requestStop();
+            TUpdateDev=null;
+
+            tToast("Device disabled");
         }
+
     }
 
     public void actionUnlink(View v){
-    }
 
-    private class UpdateDeviceListRunnable implements Runnable {
+        state_g = "2";
 
-        String userid;
+        TUpdateDev = new UpdateDeviceThread(true);
+        TUpdateDev.start();
 
-        UpdateDeviceListRunnable()
-        {
-            this.userid=String.valueOf(userid_g);
-        }
+        while(TUpdateDev.isAlive());
 
-        @Override
-        public void run() {
+        TUpdateDev=null;
+        tToast("Device unlinked");
 
-            while(true){
-
-                HttpClient httpclient=new DefaultHttpClient();
-                HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corDeviceSelect.php");
-
-                try {
-                    // Add your data
-                    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-                    nameValuePairs.add(new BasicNameValuePair("userid", userid));
-
-                    httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-
-                    // Execute HTTP Post Request
-                    HttpResponse response = httpclient.execute(httppost);
-
-                    //LISTA
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(response.getEntity().getContent(), "UTF-8"));
-                    String json = reader.readLine();
-                    JSONTokener tokener = new JSONTokener(json);
-                    JSONArray finalResult = new JSONArray(tokener);
-
-
-
-                    Log.d("addReg","LISTA ACTUALIZADA");
-
-
-                } catch (Exception e){
-
-                    Log.e("addReg", "Exception " + e.toString());
-                }
-
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }
+        Intent i=new Intent(this,ActivityLogin.class);
+        startActivity(i);
     }
 
 
-    private class UpdateDeviceRunnable implements Runnable {
+    private class UpdateDeviceThread extends Thread {
 
         String userid,devid,devlocation,devstate;
 
-        UpdateDeviceRunnable()
+        boolean unciclo = false;
+
+        private volatile boolean stop = false;
+
+        UpdateDeviceThread()
         {
+            this.userid=String.valueOf(userid_g);
+            this.devid= String.valueOf(devid_g);
+            this.devlocation= (String.valueOf(lat) + ", " + String.valueOf(lng));
+            this.devstate=state_g;
+        }
+
+        UpdateDeviceThread(boolean unciclo)
+        {
+            this.unciclo = true;
+
             this.userid=String.valueOf(userid_g);
             this.devid= String.valueOf(devid_g);
             this.devlocation= (String.valueOf(lat) + ", " + String.valueOf(lng));
@@ -317,7 +255,7 @@ public class ActivityTabs extends Activity implements LocationListener {
         @Override
         public void run() {
 
-            while(true){
+            while(!stop){
 
                 HttpClient httpclient=new DefaultHttpClient();
                 HttpPost httppost =new HttpPost("http://relguzman.com/MyLostDevice/controller_client/corDeviceUpdate.php");
@@ -354,7 +292,13 @@ public class ActivityTabs extends Activity implements LocationListener {
 
                 Log.d("addReg",devlocation +" "+ devid + " " + devstate);
 
+                if(unciclo) break;
+
             }
+        }
+
+        public synchronized void requestStop() {
+            stop = true;
         }
     }
 
