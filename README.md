@@ -8,6 +8,9 @@ Google Play: Search it as My Lost Device
 
 Related app: https://play.google.com/store/apps/details?id=com.rgap.mymobileinfo
 
+Explanation: http://relguzman.com/projects/my-lost-device-app
+
+
 Notes: Its not a service, only works when the app is running.
 
 Created @ 2013 by r.guzmanap@gmail.com
