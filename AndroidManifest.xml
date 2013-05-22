@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mylostdevice"
+    package="com.rgap.mylostdevice"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme" >
 
         <activity
-            android:name="com.example.mylostdevice.ActivityLogin"
+            android:name="com.rgap.mylostdevice.ActivityLogin"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
         </activity>
 
         <activity
-                android:name="com.example.mylostdevice.ActivityTabs"
+                android:name="com.rgap.mylostdevice.ActivityTabs"
                 android:label="@string/app_name" >
                 <intent-filter>
                     <action android:name="android.intent.action.VIEW" />
@@ -39,7 +39,7 @@
         </activity>
 
         <activity
-                android:name="com.example.mylostdevice.ActivityRegister"
+                android:name="com.rgap.mylostdevice.ActivityRegister"
                 android:label="@string/app_name" >
                 <intent-filter>
                     <action android:name="android.intent.action.VIEW" />
