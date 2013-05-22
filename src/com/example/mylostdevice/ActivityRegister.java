@@ -176,7 +176,7 @@ public class ActivityRegister extends Activity {
 
                 JSONObject obj=new JSONObject(payload);
 
-                if(obj.getString("resp") == "0") registerUser = 0;
+                if(obj.getString("resp").equals("0")) registerUser = 0;
                 else{
                     userid =  Integer.parseInt(obj.getString("resp"));
                     registerUser = 1;

@@ -202,6 +202,8 @@ public class ActivityTabs extends Activity implements LocationListener {
 
     public void actionUnlink(View v){;
 
+        updateExitDevice();
+
         tToast("Device unlinked");
 
         Intent i=new Intent(this,ActivityLogin.class);

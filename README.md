@@ -1,6 +1,6 @@
-App that finds a device (using Geolocation and "device alarm") - Android
+App that finds a device (by its location)
 
-- Project made with Android studio
+Android - min supported API 8
 
 Web application: http://relguzman.com/MyLostDevice/
 Android app: "Google Play"
