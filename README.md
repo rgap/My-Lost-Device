@@ -1,4 +1,5 @@
-App that finds a device (by its location)
+App that finds a device (by its location) : Project_AndroidStudio
+Backend : ServerCode
 
 Android - min supported API 8
 

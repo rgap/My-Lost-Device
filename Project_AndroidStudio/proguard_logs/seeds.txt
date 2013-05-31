@@ -1,0 +1,75 @@
+com.rgap.mylostdevice.ActivityLogin
+com.rgap.mylostdevice.ActivityLogin: ActivityLogin()
+com.rgap.mylostdevice.ActivityLogin: void actionLogin(android.view.View)
+com.rgap.mylostdevice.ActivityLogin: void actionGoRegister(android.view.View)
+com.rgap.mylostdevice.ActivityRegister
+com.rgap.mylostdevice.ActivityRegister: ActivityRegister()
+com.rgap.mylostdevice.ActivityRegister: void actionRegister(android.view.View)
+com.rgap.mylostdevice.ActivityTabs
+com.rgap.mylostdevice.ActivityTabs: ActivityTabs()
+com.rgap.mylostdevice.ActivityTabs: void actionChangeState(android.view.View)
+com.rgap.mylostdevice.ActivityTabs: void actionUnlink(android.view.View)
+com.rgap.mylostdevice.R$color: int color_black
+com.rgap.mylostdevice.R$color: int color_default
+com.rgap.mylostdevice.R$color: int color_orange
+com.rgap.mylostdevice.R$color: int color_white
+com.rgap.mylostdevice.R$dimen: int dim_text
+com.rgap.mylostdevice.R$drawable: int custom_button
+com.rgap.mylostdevice.R$drawable: int ic_launcher
+com.rgap.mylostdevice.R$id: int bregisteruser
+com.rgap.mylostdevice.R$id: int button
+com.rgap.mylostdevice.R$id: int descApp
+com.rgap.mylostdevice.R$id: int go_register
+com.rgap.mylostdevice.R$id: int imageView
+com.rgap.mylostdevice.R$id: int link
+com.rgap.mylostdevice.R$id: int login
+com.rgap.mylostdevice.R$id: int login_form
+com.rgap.mylostdevice.R$id: int loginemail
+com.rgap.mylostdevice.R$id: int loginpass
+com.rgap.mylostdevice.R$id: int menu_about
+com.rgap.mylostdevice.R$id: int progressBarLogin
+com.rgap.mylostdevice.R$id: int progressBarRegister
+com.rgap.mylostdevice.R$id: int regemail
+com.rgap.mylostdevice.R$id: int regpass
+com.rgap.mylostdevice.R$id: int sign_in
+com.rgap.mylostdevice.R$id: int textView
+com.rgap.mylostdevice.R$id: int toggleButton
+com.rgap.mylostdevice.R$layout: int activity_login
+com.rgap.mylostdevice.R$layout: int activity_main
+com.rgap.mylostdevice.R$layout: int activity_register
+com.rgap.mylostdevice.R$layout: int tab
+com.rgap.mylostdevice.R$menu: int activity_main
+com.rgap.mylostdevice.R$string: int action_sign_in_short
+com.rgap.mylostdevice.R$string: int app_name
+com.rgap.mylostdevice.R$string: int bt_act_device
+com.rgap.mylostdevice.R$string: int bt_add_device
+com.rgap.mylostdevice.R$string: int bt_disable_dev
+com.rgap.mylostdevice.R$string: int bt_enable_dev
+com.rgap.mylostdevice.R$string: int bt_goregister
+com.rgap.mylostdevice.R$string: int bt_login
+com.rgap.mylostdevice.R$string: int bt_register
+com.rgap.mylostdevice.R$string: int bt_submit
+com.rgap.mylostdevice.R$string: int bt_unlink
+com.rgap.mylostdevice.R$string: int created_by
+com.rgap.mylostdevice.R$string: int error_field_required
+com.rgap.mylostdevice.R$string: int error_incorrect_password
+com.rgap.mylostdevice.R$string: int error_invalid_email
+com.rgap.mylostdevice.R$string: int error_invalid_password
+com.rgap.mylostdevice.R$string: int label_config
+com.rgap.mylostdevice.R$string: int label_configdesc
+com.rgap.mylostdevice.R$string: int label_descapp
+com.rgap.mylostdevice.R$string: int label_devices
+com.rgap.mylostdevice.R$string: int label_linkweb
+com.rgap.mylostdevice.R$string: int label_listdevs
+com.rgap.mylostdevice.R$string: int label_register
+com.rgap.mylostdevice.R$string: int login_progress_signing_in
+com.rgap.mylostdevice.R$string: int menu_about
+com.rgap.mylostdevice.R$string: int menu_createby
+com.rgap.mylostdevice.R$string: int menu_forgot_password
+com.rgap.mylostdevice.R$string: int prompt_email
+com.rgap.mylostdevice.R$string: int prompt_password
+com.rgap.mylostdevice.R$string: int txt_email
+com.rgap.mylostdevice.R$string: int txt_pass
+com.rgap.mylostdevice.R$style: int AppBaseTheme
+com.rgap.mylostdevice.R$style: int AppTheme
+com.rgap.mylostdevice.R$style: int LoginFormContainer

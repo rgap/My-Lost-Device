@@ -1,0 +1,66 @@
+body
+{
+	background: #333;
+	color: #EEE;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: center;
+}
+header
+{
+	background-size: 130px, 100px 100px;
+	margin: 0 0 1em 0;
+	padding: 0.5em 0;
+	width: 100%;
+}
+header h1
+{
+	font-size: 2.5em;
+	margin: 0;
+	text-shadow: rgba(0,0,0,0.8) 5px 5px 10px;
+}
+header h2
+{
+	margin: 0;
+	font-weight: normal;
+	text-shadow: rgba(0,0,0,0.75) 2px 2px 5px;
+}
+#formcontainer
+{
+	background: rgba(0,0,0,0.6);
+	border-radius: 0.5em;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 10px;
+	display: inline-block;
+	margin: 0 2% 6em 1em;
+	padding: 1em;
+	text-align: justify;
+	text-shadow: rgba(0,0,0,0.75) 2px 2px 5px;
+	width: 600px;
+}
+#tdevices{
+	width: 100%;	
+}
+#logincomp input
+{
+	width: 96%;
+	height: 2.3em;
+	font-size: 1.2em;
+	margin-bottom: 0.5em;
+}
+
+#titulovista h1
+{
+	font-size: 1.6em;
+	text-align: center;
+}
+#loginreg
+{
+	text-align: right;
+}
+
+@media screen and (max-width: 500px){
+	#formcontainer{
+		display: block;
+		width:auto;
+	}
+}
